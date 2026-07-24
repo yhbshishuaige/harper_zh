@@ -14,7 +14,7 @@ pub struct ChinesePunctuation {
 impl ChinesePunctuation {
     pub fn new() -> Self {
         Self {
-            description: "Chinese punctuation and mixed CJK/ASCII punctuation suggestions.",
+            description: "中文标点与中英标点混用建议。",
         }
     }
 }
@@ -39,7 +39,7 @@ impl Linter for ChinesePunctuation {
                 span: Span::new(start, start + 3),
                 lint_kind: LintKind::Punctuation,
                 suggestions: vec![Suggestion::ReplaceWith("……".chars().collect())],
-                message: "In Chinese text, prefer the ellipsis “……” instead of three consecutive “。”.".into(),
+                message: "中文省略号宜用「……」，而不是连续三个「。」。".into(),
                 priority: 60,
             });
             search = abs + "。。。".len();
@@ -59,7 +59,7 @@ impl Linter for ChinesePunctuation {
                         span: Span::new(start, start + 3),
                         lint_kind: LintKind::Punctuation,
                         suggestions: vec![Suggestion::ReplaceWith("……".chars().collect())],
-                        message: "In Chinese context, prefer the ellipsis “……”.".into(),
+                        message: "中文语境中省略号宜用「……」。".into(),
                         priority: 70,
                     });
                 }
@@ -75,7 +75,7 @@ impl Linter for ChinesePunctuation {
                     span: Span::new(i + 1, i + 2),
                     lint_kind: LintKind::Punctuation,
                     suggestions: vec![Suggestion::ReplaceWith(vec!['，'])],
-                    message: "In Chinese sentences, prefer the fullwidth comma “，”.".into(),
+                    message: "中文句子中宜使用中文逗号「，」。".into(),
                     priority: 65,
                 });
             }
@@ -96,7 +96,7 @@ impl Linter for ChinesePunctuation {
                     span: Span::new(i + 1, i + 2),
                     lint_kind: LintKind::Punctuation,
                     suggestions: vec![Suggestion::ReplaceWith(vec!['。'])],
-                    message: "In Chinese sentences, prefer the fullwidth period “。”.".into(),
+                    message: "中文句子中宜使用中文句号「。」。".into(),
                     priority: 65,
                 });
             }
@@ -131,12 +131,12 @@ mod tests {
     #[test]
     fn flags_triple_period() {
         let lints = lint("他走了。。。");
-        assert!(lints.iter().any(|l| l.message.to_lowercase().contains("ellipsis")));
+        assert!(lints.iter().any(|l| l.message.contains("省略号")));
     }
 
     #[test]
     fn flags_ascii_comma() {
         let lints = lint("你好,世界");
-        assert!(lints.iter().any(|l| l.message.to_lowercase().contains("comma")));
+        assert!(lints.iter().any(|l| l.message.contains("逗号")));
     }
 }

@@ -3,8 +3,8 @@
 //! Rule pairs live in `data/*.json` (embedded at compile time) so teachers and
 //! contributors can extend them without touching Rust matching logic.
 //!
-//! Lint **messages and rule descriptions are English** (consistent with upstream Harper).
-//! The `bad` / `good` forms remain Chinese text being corrected.
+//! Lint **messages and rule descriptions are Chinese** for the Chinese rules.
+//! Rule identifiers (e.g. `ZhHomophoneSpell`) stay ASCII for CLI flags.
 
 use harper_core::linting::{LintGroup, LintKind};
 use serde::Deserialize;
@@ -239,30 +239,29 @@ mod tests {
     }
 
     #[test]
-    fn messages_are_english() {
+    fn messages_are_chinese() {
         for set in load_builtin_rule_sets() {
             assert!(
-                set.description.is_ascii()
-                    || set.description.chars().next().unwrap().is_ascii_alphabetic()
-                    || set.description.starts_with("Common")
-                    || set.description.starts_with("Redundant"),
-                "description should be English-led: {}",
+                set.description.chars().any(|c| ('\u{4e00}'..='\u{9fff}').contains(&c)),
+                "description should be Chinese: {}",
                 set.description
             );
             for p in &set.pairs {
                 let m = &p.message;
                 assert!(
-                    m.starts_with("Possible")
+                    m.chars().any(|c| ('\u{4e00}'..='\u{9fff}').contains(&c)),
+                    "message should be Chinese: {} ({})",
+                    m,
+                    p.bad
+                );
+                // Should not be English-led boilerplate
+                assert!(
+                    !(m.starts_with("Possible")
                         || m.starts_with("Use ")
                         || m.starts_with("Confusion")
-                        || m.starts_with("Redundant")
-                        || m.starts_with("Idiom")
-                        || m.starts_with("Prefer")
-                        || m.starts_with("For ")
-                        || m.starts_with("In ")
-                        || m.starts_with("Fixed")
-                        || m.chars().next().is_some_and(|c| c.is_ascii_alphabetic()),
-                    "message should be English: {} ({})",
+                        || m.starts_with("Prefer ")
+                        || m.starts_with("Idiom should")),
+                    "message still looks English: {} ({})",
                     m,
                     p.bad
                 );

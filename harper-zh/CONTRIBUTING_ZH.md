@@ -30,7 +30,7 @@ harper-zh/
 {
   "bad": "惊天早上",
   "good": "今天早上",
-  "message": "Possible nasal-final confusion: use “今天早上”."
+  "message": "疑似前后鼻音混淆：应为「今天早上」。"
 }
 ```
 
@@ -40,7 +40,7 @@ harper-zh/
 |------|------|
 | `bad` | 错误写法（会在全文中子串匹配） |
 | `good` | 建议替换 |
-| `message` | **展示给用户的说明（请用英文）** |
+| `message` | **展示给用户的中文说明** |
 
 ### 写法建议（降低误报）
 

@@ -214,7 +214,7 @@ pub fn lint(
     if let Some(only) = only {
         only.retain(|rule| {
             if !config.has_rule(rule) {
-                eprintln!("Warning: Cannot enable unknown rule '{}'.", rule);
+                eprintln!("警告：无法启用未知规则 '{}'.", rule);
                 return false;
             }
             true
@@ -224,7 +224,7 @@ pub fn lint(
     if let Some(ignore) = ignore {
         ignore.retain(|rule| {
             if !config.has_rule(rule) {
-                eprintln!("Warning: Cannot disable unknown rule '{}'.", rule);
+                eprintln!("警告：无法禁用未知规则 '{}'.", rule);
                 return false;
             }
             true
@@ -238,12 +238,12 @@ pub fn lint(
     let user_dict_msg = match load_dict(&user_dict_path) {
         Ok(user_dict) => {
             curated_plus_user_dict.add_dictionary(Arc::new(user_dict));
-            "Using"
+            "正在使用"
         }
-        Err(_) => "There is no",
+        Err(_) => "未找到",
     };
     eprintln!(
-        "Note: {user_dict_msg} user dictionary at {}",
+        "提示：{user_dict_msg}用户词典：{}",
         user_dict_path.display()
     );
 
@@ -364,7 +364,7 @@ pub fn lint(
     }
 
     if has_lints {
-        anyhow::bail!("Lints were found");
+        anyhow::bail!("发现语法/用词问题");
     }
 
     Ok(())
@@ -427,7 +427,7 @@ fn lint_one_input(
             if let Ok(file_dictionary) = load_dict(&dict_path) {
                 merged_dictionary.add_dictionary(Arc::new(file_dictionary));
                 eprintln!(
-                    "{}: Note: Using per-file dictionary: {}",
+                    "{}: 提示：正在使用按文件词典： {}",
                     current.format_path(),
                     dict_path.display()
                 );
@@ -497,7 +497,7 @@ fn lint_one_input(
                                 },
                                 line,
                                 column,
-                                message: lint.message.clone(),
+                                message: localize_lint_message(rule_name, &lint.message),
                                 priority: lint.priority,
                                 suggestions,
                                 matched_text,
@@ -545,6 +545,62 @@ fn lint_one_input(
     })
 }
 
+
+/// Best-effort Chinese localization for upstream English rule messages (display only).
+fn localize_lint_message(rule_name: &str, message: &str) -> String {
+    // Already Chinese
+    if message.chars().any(|c| ('\u{4e00}'..='\u{9fff}').contains(&c)) {
+        return message.to_string();
+    }
+
+    // Prefer rule-name based messages for stable UX
+    let by_rule = match rule_name {
+        "PronounVerbAgreement" => Some("代词与动词在人称/数上应保持一致。"),
+        "SpellCheck" => Some("疑似拼写错误。"),
+        "AnA" => Some("不定冠词 a / an 使用不当。"),
+        "ItsContraction" => Some("此处宜用 it's（it is / it has），而不是所有格 its。"),
+        "ItsPossessive" => Some("此处宜用所有格 its，而不是 it's。"),
+        "TheirToThere" => Some("此处宜用 there，而不是 their。"),
+        "TheirToTheyre" => Some("此处宜用 they're，而不是 their。"),
+        "SentenceCapitalization" => Some("句首宜大写。"),
+        "RepeatedWords" => Some("词语重复。"),
+        "LongSentences" => Some("句子过长，可考虑拆分。"),
+        "UnclosedQuotes" => Some("引号未闭合。"),
+        "EllipsisLength" => Some("省略号长度不规范。"),
+        "MissingSpace" => Some("缺少空格。"),
+        "NumberSuffixCapitalization" => Some("序数词后缀大小写不规范。"),
+        "CorrectNumberSuffix" => Some("序数词后缀不正确。"),
+        "OxfordComma" => Some("牛津逗号相关建议。"),
+        "CommaFixes" => Some("逗号用法建议。"),
+        "CurrencyPlacement" => Some("货币符号位置建议。"),
+        "AvoidCurses" => Some("建议避免粗俗用语。"),
+        "BoringWords" => Some("用词较为平淡，可考虑更具体的表达。"),
+        "SpelledNumbers" => Some("数字书写形式建议。"),
+        _ => None,
+    };
+    if let Some(zh) = by_rule {
+        return zh.to_string();
+    }
+
+    // Phrase-level fallbacks
+    let lower = message.to_ascii_lowercase();
+    if lower.contains("agree") && lower.contains("pronoun") {
+        return "代词与动词在人称/数上应保持一致。".into();
+    }
+    if lower.contains("indefinite article") {
+        return "不定冠词 a / an 使用不当。".into();
+    }
+    if lower.contains("did you mean") {
+        return format!("拼写建议：{}", message);
+    }
+    if lower.contains("spelling") {
+        return "疑似拼写问题。".into();
+    }
+
+    // Last resort: keep original so we never hide information
+    message.to_string()
+}
+
 fn configure_lint_group(
     lint_group: &mut LintGroup,
     only: &Option<Vec<String>>,
@@ -568,7 +624,7 @@ fn configure_lint_group(
         .iter_keys()
         .any(|rule| lint_group.config.is_rule_enabled(rule))
     {
-        eprintln!("Warning: No rules are enabled.");
+        eprintln!("警告：当前没有启用任何规则。");
     }
 }
 
@@ -658,7 +714,7 @@ fn single_input_report(
                     col,
                     lint.lint_kind,
                     rule_name,
-                    lint.message
+                    localize_lint_message(rule_name, &lint.message)
                 );
             }
         }
@@ -675,7 +731,7 @@ fn single_input_report(
         report_mode = &ReportStyle::BriefCountsOnly;
         if !quiet {
             println!(
-                "{}: Longest line: {longest} exceeds max line length: {MAX_LINE_LEN}",
+                "{}: 最长行 {longest} 超过限制 {MAX_LINE_LEN}，改用简要输出",
                 input.format_path()
             );
         }
@@ -684,7 +740,7 @@ fn single_input_report(
     // Report the number of lints no matter what report mode we are in
     if lint_count_before == 0 {
         if !quiet {
-            println!("{}: No lints found", input.format_path());
+            println!("{}: 未发现问题", input.format_path());
         }
     } else {
         println!(
@@ -692,8 +748,8 @@ fn single_input_report(
             input.format_path(),
             match (lint_count_before, lint_count_after) {
                 (before, after) if before != after =>
-                    format!("{before} lints before overlap removal, {after} after"),
-                (before, _) => format!("{before} lints"),
+                    format!("去重前 {before} 处，去重后 {after} 处"),
+                (before, _) => format!("共 {before} 处问题"),
             }
         );
     }
@@ -705,7 +761,7 @@ fn single_input_report(
         let input_identifier = input.input.get_identifier();
 
         if lint_count_after != 0 {
-            let mut report_builder = Report::build(ReportKind::Advice, (&input_identifier, 0..0));
+            let mut report_builder = Report::build(ReportKind::Custom("建议", Color::Fixed(147)), (&input_identifier, 0..0));
 
             for (rule_name, lints) in named_lints {
                 for lint in lints {
@@ -716,12 +772,12 @@ fn single_input_report(
                                 "{} {}: {}",
                                 format_args!("[{}::{}]", lint.lint_kind, rule_name)
                                     .fg(ariadne::Color::Rgb(r, g, b)),
-                                format_args!("(pri {})", lint.priority).fg(ariadne::Color::Rgb(
+                                format_args!("(优先级 {})", lint.priority).fg(ariadne::Color::Rgb(
                                     (r as f32 * 0.66) as u8,
                                     (g as f32 * 0.66) as u8,
                                     (b as f32 * 0.66) as u8
                                 )),
-                                lint.message
+                                localize_lint_message(rule_name, &lint.message)
                             ))
                             .with_color(primary_color),
                     );
@@ -749,7 +805,7 @@ fn single_input_report(
             })
             .collect();
 
-        println!("lint kinds:");
+        println!("问题类型：");
         print_formatted_items(lk_vec, input.color);
     }
 
@@ -762,7 +818,7 @@ fn single_input_report(
             .map(|(rn, c)| (None, format!("<{rn}: {c}>")))
             .collect();
 
-        println!("rules:");
+        println!("规则：");
         print_formatted_items(r_vec, input.color);
     }
 }
@@ -826,7 +882,7 @@ fn final_report(
             .collect();
 
         if !lint_kind_counts.is_empty() {
-            println!("All files lint kinds:");
+            println!("全部文件 · 问题类型：");
             print_formatted_items(lint_kind_counts, color);
         }
 
@@ -840,7 +896,7 @@ fn final_report(
             .collect();
 
         if !rule_name_counts.is_empty() {
-            println!("All files rule names:");
+            println!("全部文件 · 规则名称：");
             print_formatted_items(rule_name_counts, color);
         }
     }
@@ -920,7 +976,7 @@ fn final_report(
             })
             .collect();
 
-        println!("All files Spelling::SpellCheck (For dialect: {})", dialect);
+        println!("全部文件 · 拼写检查（方言：{}）", dialect);
         print_formatted_items(spelling_vec, color);
     }
 }

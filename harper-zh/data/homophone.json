@@ -1,1888 +1,1888 @@
 {
   "name": "ZhHomophoneSpell",
   "kind": "Spelling",
-  "description": "Common homophone, near-homophone, and nasal-final spelling errors, plus frequent idiom typos.",
+  "description": "检查常见同音、近音、前后鼻音拼写错误及成语错字。",
   "priority": 40,
   "pairs": [
     {
       "bad": "惊天早上",
       "good": "今天早上",
-      "message": "Possible nasal-final confusion: use “今天早上”."
+      "message": "疑似前后鼻音混淆：应为「今天早上」。"
     },
     {
       "bad": "经天早上",
       "good": "今天早上",
-      "message": "Possible homophone typo: use “今天早上”."
+      "message": "疑似同音错字：应为「今天早上」。"
     },
     {
       "bad": "精天早上",
       "good": "今天早上",
-      "message": "Possible homophone typo: use “今天早上”."
+      "message": "疑似同音错字：应为「今天早上」。"
     },
     {
       "bad": "今井早上",
       "good": "今天早上",
-      "message": "Possible homophone typo: use “今天早上”."
+      "message": "疑似同音错字：应为「今天早上」。"
     },
     {
       "bad": "因该",
       "good": "应该",
-      "message": "Possible homophone typo: use “应该”."
+      "message": "疑似同音错字：应为「应该」。"
     },
     {
       "bad": "应改",
       "good": "应该",
-      "message": "Possible homophone typo: use “应该”."
+      "message": "疑似同音错字：应为「应该」。"
     },
     {
       "bad": "心晴",
       "good": "心情",
-      "message": "Possible nasal-final confusion: use “心情”."
+      "message": "疑似前后鼻音混淆：应为「心情」。"
     },
     {
       "bad": "金天",
       "good": "今天",
-      "message": "Possible homophone typo: use “今天”."
+      "message": "疑似同音错字：应为「今天」。"
     },
     {
       "bad": "经天",
       "good": "今天",
-      "message": "Possible homophone typo: in this sense, use “今天”."
+      "message": "疑似同音错字：在此义时宜用「今天」。"
     },
     {
       "bad": "精采",
       "good": "精彩",
-      "message": "Possible nasal-final confusion: use “精彩”."
+      "message": "疑似前后鼻音混淆：应为「精彩」。"
     },
     {
       "bad": "精采纷呈",
       "good": "精彩纷呈",
-      "message": "Use “精彩纷呈”."
+      "message": "应为「精彩纷呈」。"
     },
     {
       "bad": "频律",
       "good": "频率",
-      "message": "Possible homophone typo: use “频率”."
+      "message": "疑似同音错字：应为「频率」。"
     },
     {
       "bad": "信认",
       "good": "信任",
-      "message": "Possible homophone typo: use “信任”."
+      "message": "疑似同音错字：应为「信任」。"
     },
     {
       "bad": "亲蜜",
       "good": "亲密",
-      "message": "Possible homophone typo: use “亲密”."
+      "message": "疑似同音错字：应为「亲密」。"
     },
     {
       "bad": "禁至",
       "good": "禁止",
-      "message": "Possible homophone typo: use “禁止”."
+      "message": "疑似同音错字：应为「禁止」。"
     },
     {
       "bad": "进止",
       "good": "禁止",
-      "message": "Possible homophone typo: use “禁止”."
+      "message": "疑似同音错字：应为「禁止」。"
     },
     {
       "bad": "近止",
       "good": "禁止",
-      "message": "Possible homophone typo: use “禁止”."
+      "message": "疑似同音错字：应为「禁止」。"
     },
     {
       "bad": "尽止",
       "good": "禁止",
-      "message": "Possible homophone typo: use “禁止”."
+      "message": "疑似同音错字：应为「禁止」。"
     },
     {
       "bad": "尽然",
       "good": "竟然",
-      "message": "Possible homophone typo: in this sense, use “竟然”."
+      "message": "疑似同音错字：在此义时宜用「竟然」。"
     },
     {
       "bad": "竟管",
       "good": "尽管",
-      "message": "Possible homophone typo: use “尽管”."
+      "message": "疑似同音错字：应为「尽管」。"
     },
     {
       "bad": "竞然",
       "good": "竟然",
-      "message": "Possible homophone typo: use “竟然”."
+      "message": "疑似同音错字：应为「竟然」。"
     },
     {
       "bad": "苹困",
       "good": "贫困",
-      "message": "Possible homophone typo: use “贫困”."
+      "message": "疑似同音错字：应为「贫困」。"
     },
     {
       "bad": "贫因",
       "good": "贫困",
-      "message": "Possible homophone typo: use “贫困”."
+      "message": "疑似同音错字：应为「贫困」。"
     },
     {
       "bad": "名信片",
       "good": "明信片",
-      "message": "Use “明信片”."
+      "message": "应为「明信片」。"
     },
     {
       "bad": "名显",
       "good": "明显",
-      "message": "Possible homophone typo: use “明显”."
+      "message": "疑似同音错字：应为「明显」。"
     },
     {
       "bad": "名显的",
       "good": "明显的",
-      "message": "Possible homophone typo: use “明显的”."
+      "message": "疑似同音错字：应为「明显的」。"
     },
     {
       "bad": "命显",
       "good": "明显",
-      "message": "Possible homophone typo: use “明显”."
+      "message": "疑似同音错字：应为「明显」。"
     },
     {
       "bad": "民显",
       "good": "明显",
-      "message": "Possible homophone typo: use “明显”."
+      "message": "疑似同音错字：应为「明显」。"
     },
     {
       "bad": "请除",
       "good": "清除",
-      "message": "Possible homophone typo: use “清除”."
+      "message": "疑似同音错字：应为「清除」。"
     },
     {
       "bad": "青除",
       "good": "清除",
-      "message": "Possible homophone typo: use “清除”."
+      "message": "疑似同音错字：应为「清除」。"
     },
     {
       "bad": "请楚",
       "good": "清楚",
-      "message": "Possible homophone typo: use “清楚”."
+      "message": "疑似同音错字：应为「清楚」。"
     },
     {
       "bad": "辛若",
       "good": "辛苦",
-      "message": "Possible homophone typo: use “辛苦”."
+      "message": "疑似同音错字：应为「辛苦」。"
     },
     {
       "bad": "辛若了",
       "good": "辛苦了",
-      "message": "Possible homophone typo: use “辛苦了”."
+      "message": "疑似同音错字：应为「辛苦了」。"
     },
     {
       "bad": "心苦",
       "good": "辛苦",
-      "message": "Possible homophone typo: use “辛苦”."
+      "message": "疑似同音错字：应为「辛苦」。"
     },
     {
       "bad": "心苦了",
       "good": "辛苦了",
-      "message": "Possible homophone typo: use “辛苦了”."
+      "message": "疑似同音错字：应为「辛苦了」。"
     },
     {
       "bad": "新苦",
       "good": "辛苦",
-      "message": "Possible homophone typo: use “辛苦”."
+      "message": "疑似同音错字：应为「辛苦」。"
     },
     {
       "bad": "进心",
       "good": "进行",
-      "message": "Possible nasal-final confusion: use “进行”."
+      "message": "疑似前后鼻音混淆：应为「进行」。"
     },
     {
       "bad": "进性",
       "good": "进行",
-      "message": "Possible homophone typo: use “进行”."
+      "message": "疑似同音错字：应为「进行」。"
     },
     {
       "bad": "进形",
       "good": "进行",
-      "message": "Possible homophone typo: use “进行”."
+      "message": "疑似同音错字：应为「进行」。"
     },
     {
       "bad": "近行",
       "good": "进行",
-      "message": "Possible homophone typo: use “进行”."
+      "message": "疑似同音错字：应为「进行」。"
     },
     {
       "bad": "尽行",
       "good": "进行",
-      "message": "Possible homophone typo: use “进行”."
+      "message": "疑似同音错字：应为「进行」。"
     },
     {
       "bad": "精行",
       "good": "进行",
-      "message": "Possible homophone typo: use “进行”."
+      "message": "疑似同音错字：应为「进行」。"
     },
     {
       "bad": "经行",
       "good": "进行",
-      "message": "Possible homophone typo: use “进行”."
+      "message": "疑似同音错字：应为「进行」。"
     },
     {
       "bad": "经神",
       "good": "精神",
-      "message": "Possible homophone typo: use “精神”."
+      "message": "疑似同音错字：应为「精神」。"
     },
     {
       "bad": "经神状态",
       "good": "精神状态",
-      "message": "Possible homophone typo: use “精神状态”."
+      "message": "疑似同音错字：应为「精神状态」。"
     },
     {
       "bad": "命今",
       "good": "命令",
-      "message": "Possible homophone typo: use “命令”."
+      "message": "疑似同音错字：应为「命令」。"
     },
     {
       "bad": "命领",
       "good": "命令",
-      "message": "Possible homophone typo: use “命令”."
+      "message": "疑似同音错字：应为「命令」。"
     },
     {
       "bad": "命林",
       "good": "命令",
-      "message": "Possible homophone typo: use “命令”."
+      "message": "疑似同音错字：应为「命令」。"
     },
     {
       "bad": "名令",
       "good": "命令",
-      "message": "Possible homophone typo: use “命令”."
+      "message": "疑似同音错字：应为「命令」。"
     },
     {
       "bad": "民令",
       "good": "命令",
-      "message": "Possible homophone typo: use “命令”."
+      "message": "疑似同音错字：应为「命令」。"
     },
     {
       "bad": "另听",
       "good": "聆听",
-      "message": "Possible homophone typo: use “聆听”."
+      "message": "疑似同音错字：应为「聆听」。"
     },
     {
       "bad": "另听一下",
       "good": "聆听一下",
-      "message": "Possible homophone typo: use “聆听一下”."
+      "message": "疑似同音错字：应为「聆听一下」。"
     },
     {
       "bad": "份量",
       "good": "分量",
-      "message": "Prefer “分量”."
+      "message": "宜用「分量」。"
     },
     {
       "bad": "份外",
       "good": "分外",
-      "message": "Use “分外”."
+      "message": "应为「分外」。"
     },
     {
       "bad": "份量重",
       "good": "分量重",
-      "message": "Prefer “分量重”."
+      "message": "宜用「分量重」。"
     },
     {
       "bad": "奋怒",
       "good": "愤怒",
-      "message": "Possible homophone typo: use “愤怒”."
+      "message": "疑似同音错字：应为「愤怒」。"
     },
     {
       "bad": "恨本",
       "good": "根本",
-      "message": "Possible homophone typo: use “根本”."
+      "message": "疑似同音错字：应为「根本」。"
     },
     {
       "bad": "跟本",
       "good": "根本",
-      "message": "Possible homophone typo: use “根本”."
+      "message": "疑似同音错字：应为「根本」。"
     },
     {
       "bad": "根笨",
       "good": "根本",
-      "message": "Possible homophone typo: use “根本”."
+      "message": "疑似同音错字：应为「根本」。"
     },
     {
       "bad": "根奔",
       "good": "根本",
-      "message": "Possible homophone typo: use “根本”."
+      "message": "疑似同音错字：应为「根本」。"
     },
     {
       "bad": "根崩",
       "good": "根本",
-      "message": "Possible homophone typo: use “根本”."
+      "message": "疑似同音错字：应为「根本」。"
     },
     {
       "bad": "问提",
       "good": "问题",
-      "message": "Possible homophone typo: use “问题”."
+      "message": "疑似同音错字：应为「问题」。"
     },
     {
       "bad": "问題",
       "good": "问题",
-      "message": "Possible homophone typo: use “问题”."
+      "message": "疑似同音错字：应为「问题」。"
     },
     {
       "bad": "问題是",
       "good": "问题是",
-      "message": "Possible homophone typo: use “问题是”."
+      "message": "疑似同音错字：应为「问题是」。"
     },
     {
       "bad": "问提是",
       "good": "问题是",
-      "message": "Possible homophone typo: use “问题是”."
+      "message": "疑似同音错字：应为「问题是」。"
     },
     {
       "bad": "承任",
       "good": "承认",
-      "message": "Possible homophone typo: use “承认”."
+      "message": "疑似同音错字：应为「承认」。"
     },
     {
       "bad": "承人",
       "good": "承认",
-      "message": "Possible homophone typo: use “承认”."
+      "message": "疑似同音错字：应为「承认」。"
     },
     {
       "bad": "成认",
       "good": "承认",
-      "message": "Possible homophone typo: use “承认”."
+      "message": "疑似同音错字：应为「承认」。"
     },
     {
       "bad": "成任",
       "good": "承认",
-      "message": "Possible homophone typo: use “承认”."
+      "message": "疑似同音错字：应为「承认」。"
     },
     {
       "bad": "城认",
       "good": "承认",
-      "message": "Possible homophone typo: use “承认”."
+      "message": "疑似同音错字：应为「承认」。"
     },
     {
       "bad": "诚认",
       "good": "承认",
-      "message": "Possible homophone typo: use “承认”."
+      "message": "疑似同音错字：应为「承认」。"
     },
     {
       "bad": "程认",
       "good": "承认",
-      "message": "Possible homophone typo: use “承认”."
+      "message": "疑似同音错字：应为「承认」。"
     },
     {
       "bad": "程续",
       "good": "程序",
-      "message": "Possible homophone typo: use “程序”."
+      "message": "疑似同音错字：应为「程序」。"
     },
     {
       "bad": "成序",
       "good": "程序",
-      "message": "Possible homophone typo: use “程序”."
+      "message": "疑似同音错字：应为「程序」。"
     },
     {
       "bad": "城序",
       "good": "程序",
-      "message": "Possible homophone typo: use “程序”."
+      "message": "疑似同音错字：应为「程序」。"
     },
     {
       "bad": "诚序",
       "good": "程序",
-      "message": "Possible homophone typo: use “程序”."
+      "message": "疑似同音错字：应为「程序」。"
     },
     {
       "bad": "承序",
       "good": "程序",
-      "message": "Possible homophone typo: use “程序”."
+      "message": "疑似同音错字：应为「程序」。"
     },
     {
       "bad": "城序员",
       "good": "程序员",
-      "message": "Possible homophone typo: use “程序员”."
+      "message": "疑似同音错字：应为「程序员」。"
     },
     {
       "bad": "成序员",
       "good": "程序员",
-      "message": "Possible homophone typo: use “程序员”."
+      "message": "疑似同音错字：应为「程序员」。"
     },
     {
       "bad": "程续员",
       "good": "程序员",
-      "message": "Possible homophone typo: use “程序员”."
+      "message": "疑似同音错字：应为「程序员」。"
     },
     {
       "bad": "针式",
       "good": "正式",
-      "message": "Possible homophone typo: in this sense, use “正式”."
+      "message": "疑似同音错字：在此义时宜用「正式」。"
     },
     {
       "bad": "真式",
       "good": "正式",
-      "message": "Possible homophone typo: use “正式”."
+      "message": "疑似同音错字：应为「正式」。"
     },
     {
       "bad": "阵式",
       "good": "正式",
-      "message": "Possible homophone typo: use “正式”."
+      "message": "疑似同音错字：应为「正式」。"
     },
     {
       "bad": "震式",
       "good": "正式",
-      "message": "Possible homophone typo: use “正式”."
+      "message": "疑似同音错字：应为「正式」。"
     },
     {
       "bad": "争式",
       "good": "正式",
-      "message": "Possible homophone typo: use “正式”."
+      "message": "疑似同音错字：应为「正式」。"
     },
     {
       "bad": "正试",
       "good": "正式",
-      "message": "Possible homophone typo: use “正式”."
+      "message": "疑似同音错字：应为「正式」。"
     },
     {
       "bad": "深该",
       "good": "深感",
-      "message": "Possible homophone typo: use “深感”."
+      "message": "疑似同音错字：应为「深感」。"
     },
     {
       "bad": "深该荣幸",
       "good": "深感荣幸",
-      "message": "Possible homophone typo: use “深感荣幸”."
+      "message": "疑似同音错字：应为「深感荣幸」。"
     },
     {
       "bad": "身请",
       "good": "申请",
-      "message": "Possible homophone typo: use “申请”."
+      "message": "疑似同音错字：应为「申请」。"
     },
     {
       "bad": "深请",
       "good": "申请",
-      "message": "Possible homophone typo: use “申请”."
+      "message": "疑似同音错字：应为「申请」。"
     },
     {
       "bad": "伸请",
       "good": "申请",
-      "message": "Possible homophone typo: use “申请”."
+      "message": "疑似同音错字：应为「申请」。"
     },
     {
       "bad": "绅请",
       "good": "申请",
-      "message": "Possible homophone typo: use “申请”."
+      "message": "疑似同音错字：应为「申请」。"
     },
     {
       "bad": "神请",
       "good": "申请",
-      "message": "Possible homophone typo: use “申请”."
+      "message": "疑似同音错字：应为「申请」。"
     },
     {
       "bad": "甚请",
       "good": "申请",
-      "message": "Possible homophone typo: use “申请”."
+      "message": "疑似同音错字：应为「申请」。"
     },
     {
       "bad": "掺与",
       "good": "参与",
-      "message": "Possible homophone typo: use “参与”."
+      "message": "疑似同音错字：应为「参与」。"
     },
     {
       "bad": "惨与",
       "good": "参与",
-      "message": "Possible homophone typo: use “参与”."
+      "message": "疑似同音错字：应为「参与」。"
     },
     {
       "bad": "残与",
       "good": "参与",
-      "message": "Possible homophone typo: use “参与”."
+      "message": "疑似同音错字：应为「参与」。"
     },
     {
       "bad": "餐与",
       "good": "参与",
-      "message": "Possible homophone typo: use “参与”."
+      "message": "疑似同音错字：应为「参与」。"
     },
     {
       "bad": "蚕与",
       "good": "参与",
-      "message": "Possible homophone typo: use “参与”."
+      "message": "疑似同音错字：应为「参与」。"
     },
     {
       "bad": "惨加",
       "good": "参加",
-      "message": "Possible homophone typo: use “参加”."
+      "message": "疑似同音错字：应为「参加」。"
     },
     {
       "bad": "掺加",
       "good": "参加",
-      "message": "Possible homophone typo: use “参加”."
+      "message": "疑似同音错字：应为「参加」。"
     },
     {
       "bad": "残加",
       "good": "参加",
-      "message": "Possible homophone typo: use “参加”."
+      "message": "疑似同音错字：应为「参加」。"
     },
     {
       "bad": "餐加",
       "good": "参加",
-      "message": "Possible homophone typo: use “参加”."
+      "message": "疑似同音错字：应为「参加」。"
     },
     {
       "bad": "蚕加",
       "good": "参加",
-      "message": "Possible homophone typo: use “参加”."
+      "message": "疑似同音错字：应为「参加」。"
     },
     {
       "bad": "愤发",
       "good": "奋发",
-      "message": "Possible homophone typo: use “奋发”."
+      "message": "疑似同音错字：应为「奋发」。"
     },
     {
       "bad": "愤发图强",
       "good": "奋发图强",
-      "message": "Use “奋发图强”."
+      "message": "应为「奋发图强」。"
     },
     {
       "bad": "发奋图强",
       "good": "发愤图强",
-      "message": "Idiom should be “发愤图强”."
+      "message": "成语应为「发愤图强」。"
     },
     {
       "bad": "震憾",
       "good": "震撼",
-      "message": "Use “震撼”."
+      "message": "应为「震撼」。"
     },
     {
       "bad": "振撼",
       "good": "震撼",
-      "message": "Use “震撼”."
+      "message": "应为「震撼」。"
     },
     {
       "bad": "振憾",
       "good": "震撼",
-      "message": "Use “震撼”."
+      "message": "应为「震撼」。"
     },
     {
       "bad": "震憾人心",
       "good": "震撼人心",
-      "message": "Use “震撼人心”."
+      "message": "应为「震撼人心」。"
     },
     {
       "bad": "幅射",
       "good": "辐射",
-      "message": "Use “辐射”."
+      "message": "应为「辐射」。"
     },
     {
       "bad": "防碍",
       "good": "妨碍",
-      "message": "Use “妨碍”."
+      "message": "应为「妨碍」。"
     },
     {
       "bad": "防害",
       "good": "妨害",
-      "message": "Prefer “妨害”."
+      "message": "宜用「妨害」。"
     },
     {
       "bad": "按装",
       "good": "安装",
-      "message": "Possible homophone typo: use “安装”."
+      "message": "疑似同音错字：应为「安装」。"
     },
     {
       "bad": "安状",
       "good": "安装",
-      "message": "Possible homophone typo: use “安装”."
+      "message": "疑似同音错字：应为「安装」。"
     },
     {
       "bad": "安壮",
       "good": "安装",
-      "message": "Possible homophone typo: use “安装”."
+      "message": "疑似同音错字：应为「安装」。"
     },
     {
       "bad": "安撞",
       "good": "安装",
-      "message": "Possible homophone typo: use “安装”."
+      "message": "疑似同音错字：应为「安装」。"
     },
     {
       "bad": "安桩",
       "good": "安装",
-      "message": "Possible homophone typo: use “安装”."
+      "message": "疑似同音错字：应为「安装」。"
     },
     {
       "bad": "案装",
       "good": "安装",
-      "message": "Possible homophone typo: use “安装”."
+      "message": "疑似同音错字：应为「安装」。"
     },
     {
       "bad": "暗装",
       "good": "安装",
-      "message": "Possible homophone typo: in this sense, use “安装”."
+      "message": "疑似同音错字：在此义时宜用「安装」。"
     },
     {
       "bad": "岸装",
       "good": "安装",
-      "message": "Possible homophone typo: use “安装”."
+      "message": "疑似同音错字：应为「安装」。"
     },
     {
       "bad": "扳长",
       "good": "班长",
-      "message": "Possible homophone typo: use “班长”."
+      "message": "疑似同音错字：应为「班长」。"
     },
     {
       "bad": "般长",
       "good": "班长",
-      "message": "Possible homophone typo: use “班长”."
+      "message": "疑似同音错字：应为「班长」。"
     },
     {
       "bad": "搬长",
       "good": "班长",
-      "message": "Possible homophone typo: use “班长”."
+      "message": "疑似同音错字：应为「班长」。"
     },
     {
       "bad": "颁长",
       "good": "班长",
-      "message": "Possible homophone typo: use “班长”."
+      "message": "疑似同音错字：应为「班长」。"
     },
     {
       "bad": "帮长",
       "good": "班长",
-      "message": "Possible homophone typo: use “班长”."
+      "message": "疑似同音错字：应为「班长」。"
     },
     {
       "bad": "邦助",
       "good": "帮助",
-      "message": "Possible homophone typo: use “帮助”."
+      "message": "疑似同音错字：应为「帮助」。"
     },
     {
       "bad": "绑助",
       "good": "帮助",
-      "message": "Possible homophone typo: use “帮助”."
+      "message": "疑似同音错字：应为「帮助」。"
     },
     {
       "bad": "傍助",
       "good": "帮助",
-      "message": "Possible homophone typo: use “帮助”."
+      "message": "疑似同音错字：应为「帮助」。"
     },
     {
       "bad": "谤助",
       "good": "帮助",
-      "message": "Possible homophone typo: use “帮助”."
+      "message": "疑似同音错字：应为「帮助」。"
     },
     {
       "bad": "磅助",
       "good": "帮助",
-      "message": "Possible homophone typo: use “帮助”."
+      "message": "疑似同音错字：应为「帮助」。"
     },
     {
       "bad": "长常",
       "good": "常常",
-      "message": "Possible homophone typo: use “常常”."
+      "message": "疑似同音错字：应为「常常」。"
     },
     {
       "bad": "常长",
       "good": "常常",
-      "message": "Possible homophone typo: use “常常”."
+      "message": "疑似同音错字：应为「常常」。"
     },
     {
       "bad": "场场",
       "good": "常常",
-      "message": "Possible homophone typo: use “常常”."
+      "message": "疑似同音错字：应为「常常」。"
     },
     {
       "bad": "厂厂",
       "good": "常常",
-      "message": "Possible homophone typo: use “常常”."
+      "message": "疑似同音错字：应为「常常」。"
     },
     {
       "bad": "唱唱",
       "good": "常常",
-      "message": "Possible homophone typo: use “常常”."
+      "message": "疑似同音错字：应为「常常」。"
     },
     {
       "bad": "尝常",
       "good": "常常",
-      "message": "Possible homophone typo: use “常常”."
+      "message": "疑似同音错字：应为「常常」。"
     },
     {
       "bad": "偿常",
       "good": "常常",
-      "message": "Possible homophone typo: use “常常”."
+      "message": "疑似同音错字：应为「常常」。"
     },
     {
       "bad": "倘常",
       "good": "常常",
-      "message": "Possible homophone typo: use “常常”."
+      "message": "疑似同音错字：应为「常常」。"
     },
     {
       "bad": "开访",
       "good": "开放",
-      "message": "Possible homophone typo: use “开放”."
+      "message": "疑似同音错字：应为「开放」。"
     },
     {
       "bad": "开防",
       "good": "开放",
-      "message": "Possible homophone typo: use “开放”."
+      "message": "疑似同音错字：应为「开放」。"
     },
     {
       "bad": "开仿",
       "good": "开放",
-      "message": "Possible homophone typo: use “开放”."
+      "message": "疑似同音错字：应为「开放」。"
     },
     {
       "bad": "开纺",
       "good": "开放",
-      "message": "Possible homophone typo: use “开放”."
+      "message": "疑似同音错字：应为「开放」。"
     },
     {
       "bad": "开芳",
       "good": "开放",
-      "message": "Possible homophone typo: use “开放”."
+      "message": "疑似同音错字：应为「开放」。"
     },
     {
       "bad": "返抗",
       "good": "反抗",
-      "message": "Possible homophone typo: use “反抗”."
+      "message": "疑似同音错字：应为「反抗」。"
     },
     {
       "bad": "凡抗",
       "good": "反抗",
-      "message": "Possible homophone typo: use “反抗”."
+      "message": "疑似同音错字：应为「反抗」。"
     },
     {
       "bad": "烦抗",
       "good": "反抗",
-      "message": "Possible homophone typo: use “反抗”."
+      "message": "疑似同音错字：应为「反抗」。"
     },
     {
       "bad": "繁抗",
       "good": "反抗",
-      "message": "Possible homophone typo: use “反抗”."
+      "message": "疑似同音错字：应为「反抗」。"
     },
     {
       "bad": "番抗",
       "good": "反抗",
-      "message": "Possible homophone typo: use “反抗”."
+      "message": "疑似同音错字：应为「反抗」。"
     },
     {
       "bad": "翻抗",
       "good": "反抗",
-      "message": "Possible homophone typo: use “反抗”."
+      "message": "疑似同音错字：应为「反抗」。"
     },
     {
       "bad": "饭抗",
       "good": "反抗",
-      "message": "Possible homophone typo: use “反抗”."
+      "message": "疑似同音错字：应为「反抗」。"
     },
     {
       "bad": "商亮",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "商两",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "商粮",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "商良",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "伤量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "上量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "赏量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "尚量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "汤量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "淌量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "躺量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "倘量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "趟量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "糖量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "堂量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "唐量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "烫量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "坦量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "谈量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "弹量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "坛量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "痰量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "檀量",
       "good": "商量",
-      "message": "Possible homophone typo: use “商量”."
+      "message": "疑似同音错字：应为「商量」。"
     },
     {
       "bad": "公作",
       "good": "工作",
-      "message": "Possible homophone typo: use “工作”."
+      "message": "疑似同音错字：应为「工作」。"
     },
     {
       "bad": "功作",
       "good": "工作",
-      "message": "Possible homophone typo: use “工作”."
+      "message": "疑似同音错字：应为「工作」。"
     },
     {
       "bad": "攻作",
       "good": "工作",
-      "message": "Possible homophone typo: use “工作”."
+      "message": "疑似同音错字：应为「工作」。"
     },
     {
       "bad": "恭作",
       "good": "工作",
-      "message": "Possible homophone typo: use “工作”."
+      "message": "疑似同音错字：应为「工作」。"
     },
     {
       "bad": "供作",
       "good": "工作",
-      "message": "Possible homophone typo: use “工作”."
+      "message": "疑似同音错字：应为「工作」。"
     },
     {
       "bad": "宫作",
       "good": "工作",
-      "message": "Possible homophone typo: use “工作”."
+      "message": "疑似同音错字：应为「工作」。"
     },
     {
       "bad": "弓作",
       "good": "工作",
-      "message": "Possible homophone typo: use “工作”."
+      "message": "疑似同音错字：应为「工作」。"
     },
     {
       "bad": "工做",
       "good": "工作",
-      "message": "Use “工作”."
+      "message": "应为「工作」。"
     },
     {
       "bad": "工做了",
       "good": "工作了",
-      "message": "Use “工作了”."
+      "message": "应为「工作了」。"
     },
     {
       "bad": "工做中",
       "good": "工作中",
-      "message": "Use “工作中”."
+      "message": "应为「工作中」。"
     },
     {
       "bad": "工做人员",
       "good": "工作人员",
-      "message": "Use “工作人员”."
+      "message": "应为「工作人员」。"
     },
     {
       "bad": "公作人员",
       "good": "工作人员",
-      "message": "Use “工作人员”."
+      "message": "应为「工作人员」。"
     },
     {
       "bad": "功作人员",
       "good": "工作人员",
-      "message": "Use “工作人员”."
+      "message": "应为「工作人员」。"
     },
     {
       "bad": "共作",
       "good": "工作",
-      "message": "Possible homophone typo: use “工作”."
+      "message": "疑似同音错字：应为「工作」。"
     },
     {
       "bad": "共作人员",
       "good": "工作人员",
-      "message": "Use “工作人员”."
+      "message": "应为「工作人员」。"
     },
     {
       "bad": "终文",
       "good": "中文",
-      "message": "Possible homophone typo: use “中文”."
+      "message": "疑似同音错字：应为「中文」。"
     },
     {
       "bad": "忠文",
       "good": "中文",
-      "message": "Possible homophone typo: use “中文”."
+      "message": "疑似同音错字：应为「中文」。"
     },
     {
       "bad": "钟文",
       "good": "中文",
-      "message": "Possible homophone typo: use “中文”."
+      "message": "疑似同音错字：应为「中文」。"
     },
     {
       "bad": "衷文",
       "good": "中文",
-      "message": "Possible homophone typo: use “中文”."
+      "message": "疑似同音错字：应为「中文」。"
     },
     {
       "bad": "肿文",
       "good": "中文",
-      "message": "Possible homophone typo: use “中文”."
+      "message": "疑似同音错字：应为「中文」。"
     },
     {
       "bad": "种文",
       "good": "中文",
-      "message": "Possible homophone typo: in this sense, use “中文”."
+      "message": "疑似同音错字：在此义时宜用「中文」。"
     },
     {
       "bad": "众文",
       "good": "中文",
-      "message": "Possible homophone typo: use “中文”."
+      "message": "疑似同音错字：应为「中文」。"
     },
     {
       "bad": "中要",
       "good": "重要",
-      "message": "Possible homophone typo: use “重要”."
+      "message": "疑似同音错字：应为「重要」。"
     },
     {
       "bad": "终要",
       "good": "重要",
-      "message": "Possible homophone typo: use “重要”."
+      "message": "疑似同音错字：应为「重要」。"
     },
     {
       "bad": "忠要",
       "good": "重要",
-      "message": "Possible homophone typo: use “重要”."
+      "message": "疑似同音错字：应为「重要」。"
     },
     {
       "bad": "钟要",
       "good": "重要",
-      "message": "Possible homophone typo: use “重要”."
+      "message": "疑似同音错字：应为「重要」。"
     },
     {
       "bad": "衷要",
       "good": "重要",
-      "message": "Possible homophone typo: use “重要”."
+      "message": "疑似同音错字：应为「重要」。"
     },
     {
       "bad": "肿要",
       "good": "重要",
-      "message": "Possible homophone typo: use “重要”."
+      "message": "疑似同音错字：应为「重要」。"
     },
     {
       "bad": "种要",
       "good": "重要",
-      "message": "Possible homophone typo: use “重要”."
+      "message": "疑似同音错字：应为「重要」。"
     },
     {
       "bad": "众要",
       "good": "重要",
-      "message": "Possible homophone typo: use “重要”."
+      "message": "疑似同音错字：应为「重要」。"
     },
     {
       "bad": "通高",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "同告",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "统告",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "痛告",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "童告",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "铜告",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "桶告",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "筒告",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "彤告",
       "good": "通告",
-      "message": "Possible homophone typo: use “通告”."
+      "message": "疑似同音错字：应为「通告」。"
     },
     {
       "bad": "同知",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "统知",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "痛知",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "童知",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "铜知",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "桶知",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "筒知",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "彤知",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "通之",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "同之",
       "good": "通知",
-      "message": "Possible homophone typo: use “通知”."
+      "message": "疑似同音错字：应为「通知」。"
     },
     {
       "bad": "冬面",
       "good": "东面",
-      "message": "Possible homophone typo: use “东面”."
+      "message": "疑似同音错字：应为「东面」。"
     },
     {
       "bad": "咚面",
       "good": "东面",
-      "message": "Possible homophone typo: use “东面”."
+      "message": "疑似同音错字：应为「东面」。"
     },
     {
       "bad": "懂面",
       "good": "东面",
-      "message": "Possible homophone typo: use “东面”."
+      "message": "疑似同音错字：应为「东面」。"
     },
     {
       "bad": "动面",
       "good": "东面",
-      "message": "Possible homophone typo: in this sense, use “东面”."
+      "message": "疑似同音错字：在此义时宜用「东面」。"
     },
     {
       "bad": "洞面",
       "good": "东面",
-      "message": "Possible homophone typo: use “东面”."
+      "message": "疑似同音错字：应为「东面」。"
     },
     {
       "bad": "冻面",
       "good": "东面",
-      "message": "Possible homophone typo: use “东面”."
+      "message": "疑似同音错字：应为「东面」。"
     },
     {
       "bad": "栋面",
       "good": "东面",
-      "message": "Possible homophone typo: use “东面”."
+      "message": "疑似同音错字：应为「东面」。"
     },
     {
       "bad": "侗面",
       "good": "东面",
-      "message": "Possible homophone typo: use “东面”."
+      "message": "疑似同音错字：应为「东面」。"
     },
     {
       "bad": "峒面",
       "good": "东面",
-      "message": "Possible homophone typo: use “东面”."
+      "message": "疑似同音错字：应为「东面」。"
     },
     {
       "bad": "工伕",
       "good": "工夫",
-      "message": "Possible homophone typo: use “工夫”."
+      "message": "疑似同音错字：应为「工夫」。"
     },
     {
       "bad": "功伕",
       "good": "功夫",
-      "message": "Possible homophone typo: use “功夫”."
+      "message": "疑似同音错字：应为「功夫」。"
     },
     {
       "bad": "攻夫",
       "good": "功夫",
-      "message": "Possible homophone typo: use “功夫”."
+      "message": "疑似同音错字：应为「功夫」。"
     },
     {
       "bad": "恭夫",
       "good": "功夫",
-      "message": "Possible homophone typo: use “功夫”."
+      "message": "疑似同音错字：应为「功夫」。"
     },
     {
       "bad": "供夫",
       "good": "功夫",
-      "message": "Possible homophone typo: use “功夫”."
+      "message": "疑似同音错字：应为「功夫」。"
     },
     {
       "bad": "宫夫",
       "good": "功夫",
-      "message": "Possible homophone typo: use “功夫”."
+      "message": "疑似同音错字：应为「功夫」。"
     },
     {
       "bad": "弓夫",
       "good": "功夫",
-      "message": "Possible homophone typo: use “功夫”."
+      "message": "疑似同音错字：应为「功夫」。"
     },
     {
       "bad": "公夫",
       "good": "功夫",
-      "message": "Possible homophone typo: use “功夫”."
+      "message": "疑似同音错字：应为「功夫」。"
     },
     {
       "bad": "共夫",
       "good": "功夫",
-      "message": "Possible homophone typo: use “功夫”."
+      "message": "疑似同音错字：应为「功夫」。"
     },
     {
       "bad": "再接再励",
       "good": "再接再厉",
-      "message": "Idiom should be “再接再厉”."
+      "message": "成语应为「再接再厉」。"
     },
     {
       "bad": "一如继往",
       "good": "一如既往",
-      "message": "Idiom should be “一如既往”."
+      "message": "成语应为「一如既往」。"
     },
     {
       "bad": "一如既住",
       "good": "一如既往",
-      "message": "Idiom should be “一如既往”."
+      "message": "成语应为「一如既往」。"
     },
     {
       "bad": "一如继住",
       "good": "一如既往",
-      "message": "Idiom should be “一如既往”."
+      "message": "成语应为「一如既往」。"
     },
     {
       "bad": "食不裹腹",
       "good": "食不果腹",
-      "message": "Idiom should be “食不果腹”."
+      "message": "成语应为「食不果腹」。"
     },
     {
       "bad": "鸠占雀巢",
       "good": "鸠占鹊巢",
-      "message": "Idiom should be “鸠占鹊巢”."
+      "message": "成语应为「鸠占鹊巢」。"
     },
     {
       "bad": "追朔",
       "good": "追溯",
-      "message": "Use “追溯”."
+      "message": "应为「追溯」。"
     },
     {
       "bad": "耽心",
       "good": "担心",
-      "message": "Use “担心”."
+      "message": "应为「担心」。"
     },
     {
       "bad": "符和",
       "good": "符合",
-      "message": "Use “符合”."
+      "message": "应为「符合」。"
     },
     {
       "bad": "明查暗访",
       "good": "明察暗访",
-      "message": "Idiom should be “明察暗访”."
+      "message": "成语应为「明察暗访」。"
     },
     {
       "bad": "墨守陈规",
       "good": "墨守成规",
-      "message": "Idiom should be “墨守成规”."
+      "message": "成语应为「墨守成规」。"
     },
     {
       "bad": "迫不急待",
       "good": "迫不及待",
-      "message": "Idiom should be “迫不及待”."
+      "message": "成语应为「迫不及待」。"
     },
     {
       "bad": "悬梁刺骨",
       "good": "悬梁刺股",
-      "message": "Idiom should be “悬梁刺股”."
+      "message": "成语应为「悬梁刺股」。"
     },
     {
       "bad": "走头无路",
       "good": "走投无路",
-      "message": "Idiom should be “走投无路”."
+      "message": "成语应为「走投无路」。"
     },
     {
       "bad": "不径而走",
       "good": "不胫而走",
-      "message": "Idiom should be “不胫而走”."
+      "message": "成语应为「不胫而走」。"
     },
     {
       "bad": "世外桃园",
       "good": "世外桃源",
-      "message": "Use “世外桃源”."
+      "message": "应为「世外桃源」。"
     },
     {
       "bad": "直接了当",
       "good": "直截了当",
-      "message": "Use “直截了当”."
+      "message": "应为「直截了当」。"
     },
     {
       "bad": "一愁莫展",
       "good": "一筹莫展",
-      "message": "Idiom should be “一筹莫展”."
+      "message": "成语应为「一筹莫展」。"
     },
     {
       "bad": "水笼头",
       "good": "水龙头",
-      "message": "Use “水龙头”."
+      "message": "应为「水龙头」。"
     },
     {
       "bad": "罗嗦",
       "good": "啰嗦",
-      "message": "Use “啰嗦”."
+      "message": "应为「啰嗦」。"
     },
     {
       "bad": "罗唆",
       "good": "啰唆",
-      "message": "Use “啰唆”."
+      "message": "应为「啰唆」。"
     },
     {
       "bad": "萎糜不振",
       "good": "萎靡不振",
-      "message": "Use “萎靡不振”."
+      "message": "应为「萎靡不振」。"
     },
     {
       "bad": "九洲",
       "good": "九州",
-      "message": "Use “九州”."
+      "message": "应为「九州」。"
     },
     {
       "bad": "九宵",
       "good": "九霄",
-      "message": "Use “九霄”."
+      "message": "应为「九霄」。"
     },
     {
       "bad": "重迭",
       "good": "重叠",
-      "message": "Use “重叠”."
+      "message": "应为「重叠」。"
     },
     {
       "bad": "精萃",
       "good": "精粹",
-      "message": "Use “精粹”."
+      "message": "应为「精粹」。"
     },
     {
       "bad": "凑和",
       "good": "凑合",
-      "message": "Use “凑合”."
+      "message": "应为「凑合」。"
     },
     {
       "bad": "泊来品",
       "good": "舶来品",
-      "message": "Use “舶来品”."
+      "message": "应为「舶来品」。"
     },
     {
       "bad": "气慨",
       "good": "气概",
-      "message": "Use “气概”."
+      "message": "应为「气概」。"
     },
     {
       "bad": "过尤不及",
       "good": "过犹不及",
-      "message": "Idiom should be “过犹不及”."
+      "message": "成语应为「过犹不及」。"
     },
     {
       "bad": "谈笑风声",
       "good": "谈笑风生",
-      "message": "Idiom should be “谈笑风生”."
+      "message": "成语应为「谈笑风生」。"
     },
     {
       "bad": "甘败下风",
       "good": "甘拜下风",
-      "message": "Idiom should be “甘拜下风”."
+      "message": "成语应为「甘拜下风」。"
     },
     {
       "bad": "自报自弃",
       "good": "自暴自弃",
-      "message": "Idiom should be “自暴自弃”."
+      "message": "成语应为「自暴自弃」。"
     },
     {
       "bad": "插科打浑",
       "good": "插科打诨",
-      "message": "Idiom should be “插科打诨”."
+      "message": "成语应为「插科打诨」。"
     },
     {
       "bad": "出奇不意",
       "good": "出其不意",
-      "message": "Idiom should be “出其不意”."
+      "message": "成语应为「出其不意」。"
     },
     {
       "bad": "大伤原气",
       "good": "大伤元气",
-      "message": "Use “大伤元气”."
+      "message": "应为「大伤元气」。"
     },
     {
       "bad": "鼎立相助",
       "good": "鼎力相助",
-      "message": "Idiom should be “鼎力相助”."
+      "message": "成语应为「鼎力相助」。"
     },
     {
       "bad": "渡假",
       "good": "度假",
-      "message": "Use “度假”."
+      "message": "应为「度假」。"
     },
     {
       "bad": "飞扬拔扈",
       "good": "飞扬跋扈",
-      "message": "Idiom should be “飞扬跋扈”."
+      "message": "成语应为「飞扬跋扈」。"
     },
     {
       "bad": "分道扬镖",
       "good": "分道扬镳",
-      "message": "Idiom should be “分道扬镳”."
+      "message": "成语应为「分道扬镳」。"
     },
     {
       "bad": "风糜一时",
       "good": "风靡一时",
-      "message": "Idiom should be “风靡一时”."
+      "message": "成语应为「风靡一时」。"
     },
     {
       "bad": "锋芒必露",
       "good": "锋芒毕露",
-      "message": "Idiom should be “锋芒毕露”."
+      "message": "成语应为「锋芒毕露」。"
     },
     {
       "bad": "幅圆辽阔",
       "good": "幅员辽阔",
-      "message": "Idiom should be “幅员辽阔”."
+      "message": "成语应为「幅员辽阔」。"
     },
     {
       "bad": "负偶顽抗",
       "good": "负隅顽抗",
-      "message": "Idiom should be “负隅顽抗”."
+      "message": "成语应为「负隅顽抗」。"
     },
     {
       "bad": "改斜归正",
       "good": "改邪归正",
-      "message": "Idiom should be “改邪归正”."
+      "message": "成语应为「改邪归正」。"
     },
     {
       "bad": "各行其事",
       "good": "各行其是",
-      "message": "Idiom should be “各行其是”."
+      "message": "成语应为「各行其是」。"
     },
     {
       "bad": "各书己见",
       "good": "各抒己见",
-      "message": "Idiom should be “各抒己见”."
+      "message": "成语应为「各抒己见」。"
     },
     {
       "bad": "功亏一匮",
       "good": "功亏一篑",
-      "message": "Idiom should be “功亏一篑”."
+      "message": "成语应为「功亏一篑」。"
     },
     {
       "bad": "鬼鬼崇崇",
       "good": "鬼鬼祟祟",
-      "message": "Idiom should be “鬼鬼祟祟”."
+      "message": "成语应为「鬼鬼祟祟」。"
     },
     {
       "bad": "含辛如苦",
       "good": "含辛茹苦",
-      "message": "Idiom should be “含辛茹苦”."
+      "message": "成语应为「含辛茹苦」。"
     },
     {
       "bad": "好高鹜远",
       "good": "好高骛远",
-      "message": "Idiom should be “好高骛远”."
+      "message": "成语应为「好高骛远」。"
     },
     {
       "bad": "和霭可亲",
       "good": "和蔼可亲",
-      "message": "Idiom should be “和蔼可亲”."
+      "message": "成语应为「和蔼可亲」。"
     },
     {
       "bad": "轰堂大笑",
       "good": "哄堂大笑",
-      "message": "Idiom should be “哄堂大笑”."
+      "message": "成语应为「哄堂大笑」。"
     },
     {
       "bad": "候门似海",
       "good": "侯门似海",
-      "message": "Idiom should be “侯门似海”."
+      "message": "成语应为「侯门似海」。"
     },
     {
       "bad": "虎视耽耽",
       "good": "虎视眈眈",
-      "message": "Idiom should be “虎视眈眈”."
+      "message": "成语应为「虎视眈眈」。"
     },
     {
       "bad": "黄梁美梦",
       "good": "黄粱美梦",
-      "message": "Idiom should be “黄粱美梦”."
+      "message": "成语应为「黄粱美梦」。"
     },
     {
       "bad": "回亿",
       "good": "回忆",
-      "message": "Possible homophone typo: use “回忆”."
+      "message": "疑似同音错字：应为「回忆」。"
     },
     {
       "bad": "回意",
       "good": "回忆",
-      "message": "Possible homophone typo: use “回忆”."
+      "message": "疑似同音错字：应为「回忆」。"
     },
     {
       "bad": "回异",
       "good": "回忆",
-      "message": "Possible homophone typo: use “回忆”."
+      "message": "疑似同音错字：应为「回忆」。"
     },
     {
       "bad": "回义",
       "good": "回忆",
-      "message": "Possible homophone typo: use “回忆”."
+      "message": "疑似同音错字：应为「回忆」。"
     },
     {
       "bad": "急待解决",
       "good": "亟待解决",
-      "message": "Prefer “亟待解决”."
+      "message": "宜用「亟待解决」。"
     },
     {
       "bad": "既往不究",
       "good": "既往不咎",
-      "message": "Idiom should be “既往不咎”."
+      "message": "成语应为「既往不咎」。"
     },
     {
       "bad": "佳宾",
       "good": "嘉宾",
-      "message": "Use “嘉宾”."
+      "message": "应为「嘉宾」。"
     },
     {
       "bad": "坚如盘石",
       "good": "坚如磐石",
-      "message": "Idiom should be “坚如磐石”."
+      "message": "成语应为「坚如磐石」。"
     },
     {
       "bad": "矫柔造作",
       "good": "矫揉造作",
-      "message": "Idiom should be “矫揉造作”."
+      "message": "成语应为「矫揉造作」。"
     },
     {
       "bad": "金榜提名",
       "good": "金榜题名",
-      "message": "Idiom should be “金榜题名”."
+      "message": "成语应为「金榜题名」。"
     },
     {
       "bad": "精兵减政",
       "good": "精兵简政",
-      "message": "Idiom should be “精兵简政”."
+      "message": "成语应为「精兵简政」。"
     },
     {
       "bad": "开源截流",
       "good": "开源节流",
-      "message": "Idiom should be “开源节流”."
+      "message": "成语应为「开源节流」。"
     },
     {
       "bad": "烂竽充数",
       "good": "滥竽充数",
-      "message": "Idiom should be “滥竽充数”."
+      "message": "成语应为「滥竽充数」。"
     },
     {
       "bad": "老生长谈",
       "good": "老生常谈",
-      "message": "Idiom should be “老生常谈”."
+      "message": "成语应为「老生常谈」。"
     },
     {
       "bad": "礼上往来",
       "good": "礼尚往来",
-      "message": "Idiom should be “礼尚往来”."
+      "message": "成语应为「礼尚往来」。"
     },
     {
       "bad": "励行节约",
       "good": "厉行节约",
-      "message": "Idiom should be “厉行节约”."
+      "message": "成语应为「厉行节约」。"
     },
     {
       "bad": "寥若辰星",
       "good": "寥若晨星",
-      "message": "Idiom should be “寥若晨星”."
+      "message": "成语应为「寥若晨星」。"
     },
     {
       "bad": "流览",
       "good": "浏览",
-      "message": "Use “浏览”."
+      "message": "应为「浏览」。"
     },
     {
       "bad": "美仑美奂",
       "good": "美轮美奂",
-      "message": "Idiom should be “美轮美奂”."
+      "message": "成语应为「美轮美奂」。"
     },
     {
       "bad": "门廷若市",
       "good": "门庭若市",
-      "message": "Idiom should be “门庭若市”."
+      "message": "成语应为「门庭若市」。"
     },
     {
       "bad": "明火执杖",
       "good": "明火执仗",
-      "message": "Idiom should be “明火执仗”."
+      "message": "成语应为「明火执仗」。"
     },
     {
       "bad": "莫不关心",
       "good": "漠不关心",
-      "message": "Idiom should be “漠不关心”."
+      "message": "成语应为「漠不关心」。"
     },
     {
       "bad": "沤心沥血",
       "good": "呕心沥血",
-      "message": "Idiom should be “呕心沥血”."
+      "message": "成语应为「呕心沥血」。"
     },
     {
       "bad": "旁证博引",
       "good": "旁征博引",
-      "message": "Idiom should be “旁征博引”."
+      "message": "成语应为「旁征博引」。"
     },
     {
       "bad": "篷荜生辉",
       "good": "蓬荜生辉",
-      "message": "Idiom should be “蓬荜生辉”."
+      "message": "成语应为「蓬荜生辉」。"
     },
     {
       "bad": "披星带月",
       "good": "披星戴月",
-      "message": "Idiom should be “披星戴月”."
+      "message": "成语应为「披星戴月」。"
     },
     {
       "bad": "破斧沉舟",
       "good": "破釜沉舟",
-      "message": "Idiom should be “破釜沉舟”."
+      "message": "成语应为「破釜沉舟」。"
     },
     {
       "bad": "前扑后继",
       "good": "前仆后继",
-      "message": "Idiom should be “前仆后继”."
+      "message": "成语应为「前仆后继」。"
     },
     {
       "bad": "切蹉",
       "good": "切磋",
-      "message": "Use “切磋”."
+      "message": "应为「切磋」。"
     },
     {
       "bad": "情不自尽",
       "good": "情不自禁",
-      "message": "Idiom should be “情不自禁”."
+      "message": "成语应为「情不自禁」。"
     },
     {
       "bad": "入不付出",
       "good": "入不敷出",
-      "message": "Idiom should be “入不敷出”."
+      "message": "成语应为「入不敷出」。"
     },
     {
       "bad": "弱不经风",
       "good": "弱不禁风",
-      "message": "Idiom should be “弱不禁风”."
+      "message": "成语应为「弱不禁风」。"
     },
     {
       "bad": "三翻五次",
       "good": "三番五次",
-      "message": "Idiom should be “三番五次”."
+      "message": "成语应为「三番五次」。"
     },
     {
       "bad": "色厉内忍",
       "good": "色厉内荏",
-      "message": "Idiom should be “色厉内荏”."
+      "message": "成语应为「色厉内荏」。"
     },
     {
       "bad": "山青水秀",
       "good": "山清水秀",
-      "message": "Idiom should be “山清水秀”."
+      "message": "成语应为「山清水秀」。"
     },
     {
       "bad": "申张正义",
       "good": "伸张正义",
-      "message": "Idiom should be “伸张正义”."
+      "message": "成语应为「伸张正义」。"
     },
     {
       "bad": "神彩奕奕",
       "good": "神采奕奕",
-      "message": "Idiom should be “神采奕奕”."
+      "message": "成语应为「神采奕奕」。"
     },
     {
       "bad": "声名雀起",
       "good": "声名鹊起",
-      "message": "Idiom should be “声名鹊起”."
+      "message": "成语应为「声名鹊起」。"
     },
     {
       "bad": "史无前列",
       "good": "史无前例",
-      "message": "Idiom should be “史无前例”."
+      "message": "成语应为「史无前例」。"
     },
     {
       "bad": "事必恭亲",
       "good": "事必躬亲",
-      "message": "Idiom should be “事必躬亲”."
+      "message": "成语应为「事必躬亲」。"
     },
     {
       "bad": "手屈一指",
       "good": "首屈一指",
-      "message": "Idiom should be “首屈一指”."
+      "message": "成语应为「首屈一指」。"
     },
     {
       "bad": "死皮癞脸",
       "good": "死皮赖脸",
-      "message": "Idiom should be “死皮赖脸”."
+      "message": "成语应为「死皮赖脸」。"
     },
     {
       "bad": "叹为观之",
       "good": "叹为观止",
-      "message": "Idiom should be “叹为观止”."
+      "message": "成语应为「叹为观止」。"
     },
     {
       "bad": "提心掉胆",
       "good": "提心吊胆",
-      "message": "Idiom should be “提心吊胆”."
+      "message": "成语应为「提心吊胆」。"
     },
     {
       "bad": "挑肥捡瘦",
       "good": "挑肥拣瘦",
-      "message": "Idiom should be “挑肥拣瘦”."
+      "message": "成语应为「挑肥拣瘦」。"
     },
     {
       "bad": "挺而走险",
       "good": "铤而走险",
-      "message": "Idiom should be “铤而走险”."
+      "message": "成语应为「铤而走险」。"
     },
     {
       "bad": "图穷匕首见",
       "good": "图穷匕见",
-      "message": "Idiom should be “图穷匕见”."
+      "message": "成语应为「图穷匕见」。"
     },
     {
       "bad": "完美无暇",
       "good": "完美无瑕",
-      "message": "Idiom should be “完美无瑕”."
+      "message": "成语应为「完美无瑕」。"
     },
     {
       "bad": "万古长晴",
       "good": "万古长青",
-      "message": "Idiom should be “万古长青”."
+      "message": "成语应为「万古长青」。"
     },
     {
       "bad": "忘想",
       "good": "妄想",
-      "message": "Use “妄想”."
+      "message": "应为「妄想」。"
     },
     {
       "bad": "委屈求全",
       "good": "委曲求全",
-      "message": "Idiom should be “委曲求全”."
+      "message": "成语应为「委曲求全」。"
     },
     {
       "bad": "无可耐何",
       "good": "无可奈何",
-      "message": "Idiom should be “无可奈何”."
+      "message": "成语应为「无可奈何」。"
     },
     {
       "bad": "无精打彩",
       "good": "无精打采",
-      "message": "Idiom should be “无精打采”."
+      "message": "成语应为「无精打采」。"
     },
     {
       "bad": "无尚光荣",
       "good": "无上光荣",
-      "message": "Idiom should be “无上光荣”."
+      "message": "成语应为「无上光荣」。"
     },
     {
       "bad": "无所是从",
       "good": "无所适从",
-      "message": "Idiom should be “无所适从”."
+      "message": "成语应为「无所适从」。"
     },
     {
       "bad": "熙熙嚷嚷",
       "good": "熙熙攘攘",
-      "message": "Idiom should be “熙熙攘攘”."
+      "message": "成语应为「熙熙攘攘」。"
     },
     {
       "bad": "相形见拙",
       "good": "相形见绌",
-      "message": "Idiom should be “相形见绌”."
+      "message": "成语应为「相形见绌」。"
     },
     {
       "bad": "消声匿迹",
       "good": "销声匿迹",
-      "message": "Idiom should be “销声匿迹”."
+      "message": "成语应为「销声匿迹」。"
     },
     {
       "bad": "心恢意懒",
       "good": "心灰意懒",
-      "message": "Idiom should be “心灰意懒”."
+      "message": "成语应为「心灰意懒」。"
     },
     {
       "bad": "喧然大波",
       "good": "轩然大波",
-      "message": "Idiom should be “轩然大波”."
+      "message": "成语应为「轩然大波」。"
     },
     {
       "bad": "循私舞弊",
       "good": "徇私舞弊",
-      "message": "Idiom should be “徇私舞弊”."
+      "message": "成语应为「徇私舞弊」。"
     },
     {
       "bad": "言简意骇",
       "good": "言简意赅",
-      "message": "Idiom should be “言简意赅”."
+      "message": "成语应为「言简意赅」。"
     },
     {
       "bad": "养尊处忧",
       "good": "养尊处优",
-      "message": "Idiom should be “养尊处优”."
+      "message": "成语应为「养尊处优」。"
     },
     {
       "bad": "一股作气",
       "good": "一鼓作气",
-      "message": "Idiom should be “一鼓作气”."
+      "message": "成语应为「一鼓作气」。"
     },
     {
       "bad": "一视同人",
       "good": "一视同仁",
-      "message": "Idiom should be “一视同仁”."
+      "message": "成语应为「一视同仁」。"
     },
     {
       "bad": "以逸代劳",
       "good": "以逸待劳",
-      "message": "Idiom should be “以逸待劳”."
+      "message": "成语应为「以逸待劳」。"
     },
     {
       "bad": "饮水思原",
       "good": "饮水思源",
-      "message": "Idiom should be “饮水思源”."
+      "message": "成语应为「饮水思源」。"
     },
     {
       "bad": "忧柔寡断",
       "good": "优柔寡断",
-      "message": "Idiom should be “优柔寡断”."
+      "message": "成语应为「优柔寡断」。"
     },
     {
       "bad": "有口皆杯",
       "good": "有口皆碑",
-      "message": "Idiom should be “有口皆碑”."
+      "message": "成语应为「有口皆碑」。"
     },
     {
       "bad": "原形必露",
       "good": "原形毕露",
-      "message": "Idiom should be “原形毕露”."
+      "message": "成语应为「原形毕露」。"
     },
     {
       "bad": "仗义直言",
       "good": "仗义执言",
-      "message": "Idiom should be “仗义执言”."
+      "message": "成语应为「仗义执言」。"
     },
     {
       "bad": "遮天避日",
       "good": "遮天蔽日",
-      "message": "Idiom should be “遮天蔽日”."
+      "message": "成语应为「遮天蔽日」。"
     },
     {
       "bad": "指手划脚",
       "good": "指手画脚",
-      "message": "Idiom should be “指手画脚”."
+      "message": "成语应为「指手画脚」。"
     },
     {
       "bad": "众口烁金",
       "good": "众口铄金",
-      "message": "Idiom should be “众口铄金”."
+      "message": "成语应为「众口铄金」。"
     },
     {
       "bad": "众目葵葵",
       "good": "众目睽睽",
-      "message": "Idiom should be “众目睽睽”."
+      "message": "成语应为「众目睽睽」。"
     },
     {
       "bad": "自抱自弃",
       "good": "自暴自弃",
-      "message": "Idiom should be “自暴自弃”."
+      "message": "成语应为「自暴自弃」。"
     },
     {
       "bad": "坐想其成",
       "good": "坐享其成",
-      "message": "Idiom should be “坐享其成”."
+      "message": "成语应为「坐享其成」。"
     },
     {
       "bad": "坐以待币",
       "good": "坐以待毙",
-      "message": "Idiom should be “坐以待毙”."
+      "message": "成语应为「坐以待毙」。"
     }
   ]
 }

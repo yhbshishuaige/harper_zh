@@ -23,15 +23,15 @@
 | 分类文件 | 同音→`homophone`；易混→`word_confusion` 等 |
 | 重复 | 同一 `bad` 不要多条互相冲突 |
 
-### message 写法示例（**英文**）
+### message 写法示例（**中文**）
 
-Lint 提示语请使用 **English**（与上游 Harper 一致）；`bad`/`good` 仍为中文写法。
+本 fork 的检查提示、问题类型、替换建议均使用 **中文**。
 
-- 好：`Possible nasal-final confusion: use “今天早上”.`
-- 好：`Confusion of 在/再: for goodbye, use “再见”.`
-- 好：`Use 地 before a verb (adverbial): “开心地跑”.`
-- 差：`错误`（无信息 / 非英文）
-- 差：`Please fix`（无正误对照）
+- 好：`疑似前后鼻音混淆：应为「今天早上」。`
+- 好：`「在/再」混淆：告别应为「再见」。`
+- 好：`修饰动词时用「地」：开心地跑。`
+- 差：`错误`（无信息）
+- 差：`Please fix`（非中文 / 无正误对照）
 
 ## 三、分类对照
 

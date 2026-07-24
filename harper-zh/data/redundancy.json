@@ -1,113 +1,113 @@
 {
   "name": "ZhRedundancy",
   "kind": "Repetition",
-  "description": "Redundant repetition such as 的的, 了了, 非常非常非常.",
+  "description": "检查多余重复，如「的的」「了了」「非常非常非常」。",
   "priority": 50,
   "pairs": [
     {
       "bad": "的的",
       "good": "的",
-      "message": "Redundant repetition: consecutive “的”."
+      "message": "多余重复：连续两个「的」。"
     },
     {
       "bad": "了了",
       "good": "了",
-      "message": "Redundant repetition: consecutive “了”."
+      "message": "多余重复：连续两个「了」。"
     },
     {
       "bad": "是是",
       "good": "是",
-      "message": "Redundant repetition: consecutive “是”."
+      "message": "多余重复：连续两个「是」。"
     },
     {
       "bad": "的话的话",
       "good": "的话",
-      "message": "Redundant repetition: use “的话”."
+      "message": "多余重复：宜用「的话」。"
     },
     {
       "bad": "非常非常非常",
       "good": "非常",
-      "message": "Over-repeated intensifier: prefer “非常”."
+      "message": "程度副词过度重复，可精简为「非常」。"
     },
     {
       "bad": "必须须",
       "good": "必须",
-      "message": "Repeated character(s): use “必须”."
+      "message": "重复用字：应为「必须」。"
     },
     {
       "bad": "需需要",
       "good": "需要",
-      "message": "Repeated character(s): use “需要”."
+      "message": "重复用字：应为「需要」。"
     },
     {
       "bad": "进行进行",
       "good": "进行",
-      "message": "Redundant repetition: use “进行”."
+      "message": "多余重复：宜用「进行」。"
     },
     {
       "bad": "可以可以",
       "good": "可以",
-      "message": "Redundant repetition: use “可以”."
+      "message": "多余重复：宜用「可以」。"
     },
     {
       "bad": "应该应该",
       "good": "应该",
-      "message": "Redundant repetition: use “应该”."
+      "message": "多余重复：宜用「应该」。"
     },
     {
       "bad": "已经已经",
       "good": "已经",
-      "message": "Redundant repetition: use “已经”."
+      "message": "多余重复：宜用「已经」。"
     },
     {
       "bad": "因为因为",
       "good": "因为",
-      "message": "Redundant repetition: use “因为”."
+      "message": "多余重复：宜用「因为」。"
     },
     {
       "bad": "所以所以",
       "good": "所以",
-      "message": "Redundant repetition: use “所以”."
+      "message": "多余重复：宜用「所以」。"
     },
     {
       "bad": "但是但是",
       "good": "但是",
-      "message": "Redundant repetition: use “但是”."
+      "message": "多余重复：宜用「但是」。"
     },
     {
       "bad": "然后然后",
       "good": "然后",
-      "message": "Redundant repetition: use “然后”."
+      "message": "多余重复：宜用「然后」。"
     },
     {
       "bad": "继续继续",
       "good": "继续",
-      "message": "Redundant repetition: use “继续”."
+      "message": "多余重复：宜用「继续」。"
     },
     {
       "bad": "开始开始",
       "good": "开始",
-      "message": "Redundant repetition: use “开始”."
+      "message": "多余重复：宜用「开始」。"
     },
     {
       "bad": "结束结束",
       "good": "结束",
-      "message": "Redundant repetition: use “结束”."
+      "message": "多余重复：宜用「结束」。"
     },
     {
       "bad": "很多很多很多",
       "good": "很多",
-      "message": "Over-repeated intensifier: prefer “很多”."
+      "message": "程度副词过度重复，可精简为「很多」。"
     },
     {
       "bad": "特别特别特别",
       "good": "特别",
-      "message": "Over-repeated intensifier: prefer “特别”."
+      "message": "程度副词过度重复，可精简为「特别」。"
     },
     {
       "bad": "十分十分",
       "good": "十分",
-      "message": "Over-repeated intensifier: prefer “十分”."
+      "message": "程度副词过度重复，可精简为「十分」。"
     }
   ]
 }

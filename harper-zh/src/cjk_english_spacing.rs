@@ -16,7 +16,7 @@ pub struct CjkEnglishSpacing {
 impl CjkEnglishSpacing {
     pub fn new() -> Self {
         Self {
-            description: "CJK–English mixed text: prefer a space between Han characters and Latin letters (style).",
+            description: "中英文混排：汉字与拉丁字母之间宜加空格（风格建议）。",
         }
     }
 }
@@ -48,9 +48,9 @@ impl Linter for CjkEnglishSpacing {
                     lint_kind: LintKind::Style,
                     suggestions: vec![Suggestion::ReplaceWith(vec![a, ' ', b])],
                     message: if cjk_then_latin {
-                        "Prefer a space between a Chinese character and an English word.".into()
+                        "汉字与英文之间宜加空格。".into()
                     } else {
-                        "Prefer a space between an English word and a Chinese character.".into()
+                        "英文与汉字之间宜加空格。".into()
                     },
                     priority: 80,
                 });
@@ -94,7 +94,7 @@ mod tests {
     fn flags_cjk_latin() {
         let lints = lint("使用React框架");
         assert!(!lints.is_empty());
-        assert!(lints.iter().any(|l| l.message.to_lowercase().contains("space")));
+        assert!(lints.iter().any(|l| l.message.contains("空格")));
     }
 
     #[test]
