@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "sets": [
+    "homophone.json",
+    "de_di_de.json",
+    "word_confusion.json",
+    "redundancy.json"
+  ]
+}
