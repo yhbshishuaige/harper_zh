@@ -10,6 +10,7 @@
 | [quickstart.md](./quickstart.md) | 安装、编译、常用命令 |
 | [rules-catalog.md](./rules-catalog.md) | 全部短语规则目录（由 JSON 汇总） |
 | [teaching-checklist.md](./teaching-checklist.md) | 教研审核清单 |
+| [fix-and-ignore.md](./fix-and-ignore.md) | **自动修复与忽略规则** |
 | [../../harper-zh/README.md](../../harper-zh/README.md) | `harper-zh` 模块说明 |
 | [../../harper-zh/CONTRIBUTING_ZH.md](../../harper-zh/CONTRIBUTING_ZH.md) | 如何用 JSON 扩展规则 |
 | [../../sample_zh.txt](../../sample_zh.txt) | 可直接 lint 的样例 |

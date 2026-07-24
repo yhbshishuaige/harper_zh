@@ -344,9 +344,11 @@ pub fn lint(
     };
 
     let mut json_results: Vec<JsonFileResult> = Vec::new();
+    let mut total_fixed = 0usize;
 
     for lint_results in per_input_results {
         let lint_results = lint_results?;
+        total_fixed += lint_results.fixed_count;
         // Update the global stats
         for (kind, count) in lint_results.lint_kinds {
             *all_lint_kinds.entry(kind).or_insert(0) += count;
@@ -366,6 +368,23 @@ pub fn lint(
     }
 
     let has_lints = !all_lint_kinds.is_empty();
+    // After --fix, remaining SpellCheck-only issues are advisory for tech notes
+    // (model names etc.) and should not fail the process.
+    let advisory_rule_count = all_rules.len();
+    let only_advisory = !all_rules.is_empty()
+        && all_rules.keys().all(|r| {
+            matches!(
+                r.as_str(),
+                "SpellCheck"
+                    | "OrthographicConsistency"
+                    | "BoringWords"
+                    | "AvoidCurses"
+                    | "LongSentences"
+                    | "ExpandPeople"
+                    | "ExpandTimeShorthands"
+                    | "ExpandMemoryShorthands"
+            )
+        });
 
     match report_mode {
         ReportStyle::Json => {
@@ -386,7 +405,26 @@ pub fn lint(
     }
 
     if has_lints {
+        if lint_options.fix && only_advisory {
+            if !lint_options.quiet {
+                eprintln!(
+                    "提示：仍有 {} 类拼写/建议性提示未自动修改（如专有名词）。安全项已处理完毕。",
+                    advisory_rule_count
+                );
+            }
+            return Ok(());
+        }
+        if lint_options.fix && total_fixed > 0 {
+            anyhow::bail!(
+                "已自动修复部分问题，但仍有 {} 类问题需人工处理",
+                advisory_rule_count
+            );
+        }
         anyhow::bail!("发现语法/用词问题");
+    }
+
+    if lint_options.fix && total_fixed > 0 && !lint_options.quiet {
+        eprintln!("全部可自动修复项已处理完毕（共 {} 处）", total_fixed);
     }
 
     Ok(())
@@ -398,6 +436,8 @@ struct LintOneResult {
     lint_kind_rule_pairs: HashMap<(LintKind, String), usize>,
     spellos: HashMap<String, usize>,
     json: Option<JsonFileResult>,
+    /// Safe fixes applied in this input (0 if --fix not used).
+    fixed_count: usize,
 }
 
 struct FullInputInfo<'a> {
@@ -440,6 +480,7 @@ fn lint_one_input(
     let mut lint_kind_rule_pairs: HashMap<(LintKind, String), usize> = HashMap::new();
     let mut spellos: HashMap<String, usize> = HashMap::new();
     let mut json: Option<JsonFileResult> = None;
+    let mut fixed_count = 0usize;
 
     if let Some(single_input) = current.input.try_as_single_ref() {
         // Create a new merged dictionary for this input.
@@ -509,6 +550,7 @@ fn lint_one_input(
                                 break;
                             }
                             total_applied += applied;
+                            fixed_count = total_applied;
                             working_text = fixed;
                             fs::write(file.path(), &working_text).with_context(|| {
                                 format!("无法写入修复结果到 {}", file.path().display())
@@ -554,6 +596,7 @@ fn lint_one_input(
                         let (fixed, applied) =
                             apply_first_suggestions(&named_lints, &working_text);
                         if applied > 0 {
+                            fixed_count = applied;
                             print!("{fixed}");
                             if !lint_options.quiet {
                                 eprintln!(
@@ -645,6 +688,7 @@ fn lint_one_input(
         lint_kind_rule_pairs,
         spellos,
         json,
+        fixed_count,
     })
 }
 
