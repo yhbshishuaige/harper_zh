@@ -13,7 +13,7 @@ use serde::Serialize;
 use harper_core::{
     Dialect, DictWordMetadata, Document, Token, TokenKind,
     linting::{FlatConfig, Lint, LintGroup, LintKind},
-    parsers::MarkdownOptions,
+    parsers::{MarkdownOptions, PlainEnglish},
     remove_overlaps_map,
     spell::{Dictionary, MergedDictionary, MutableDictionary},
     weirpack::Weirpack,
@@ -472,7 +472,8 @@ fn lint_one_input(
             }
             Ok((doc, source)) => {
                 // Create the Lint Group from which we will lint this input, using the combined dictionary and the specified dialect
-                let mut lint_group = LintGroup::new_curated(merged_dictionary.into(), *dialect);
+                let mut lint_group =
+                    LintGroup::new_curated(Arc::new(merged_dictionary.clone()), *dialect);
                 // Chinese rules (spelling confusions, 的/地/得, mixed CJK-English, …)
                 harper_zh::extend_lint_group(&mut lint_group);
 
@@ -494,40 +495,81 @@ fn lint_one_input(
                 }
                 let mut lint_count_after = named_lints.values().map(|v| v.len()).sum::<usize>();
 
-                // Optionally apply first suggestion of safe lints and write back.
+                // Optionally apply safe fixes. Files get multi-pass re-lint (max 5).
                 if *fix {
-                    let original = source.as_ref();
-                    let (fixed, applied) = apply_first_suggestions(&named_lints, original);
-                    if applied > 0 {
-                        if let Some(file) = single_input.try_as_file_ref() {
-                            fs::write(file.path(), &fixed).with_context(|| {
+                    const MAX_FIX_PASSES: usize = 5;
+                    let mut total_applied = 0usize;
+                    let mut working_text = source.as_ref().to_string();
+
+                    if let Some(file) = single_input.try_as_file_ref() {
+                        for pass in 1..=MAX_FIX_PASSES {
+                            let (fixed, applied) =
+                                apply_first_suggestions(&named_lints, &working_text);
+                            if applied == 0 {
+                                break;
+                            }
+                            total_applied += applied;
+                            working_text = fixed;
+                            fs::write(file.path(), &working_text).with_context(|| {
                                 format!("无法写入修复结果到 {}", file.path().display())
                             })?;
-                            if !lint_options.quiet {
-                                eprintln!(
-                                    "{}: 已自动修复 {} 处（中文/标点/空格等安全规则），并写回文件",
-                                    current.format_path(),
-                                    applied
-                                );
+
+                            // Re-parse and re-lint after write so cascading spacing fixes apply.
+                            let doc2 =
+                                Document::new(&working_text, &PlainEnglish, &merged_dictionary);
+                            named_lints = lint_group.organized_lints(&doc2);
+                            if !keep_overlapping_lints {
+                                remove_overlaps_map(&mut named_lints);
                             }
-                        } else {
-                            // Text / stdin: print fixed document to stdout
-                            print!("{fixed}");
                             if !lint_options.quiet {
                                 eprintln!(
-                                    "已自动修复 {} 处（中文/标点/空格等安全规则；输出到标准输出）",
+                                    "{}: 第 {} 轮自动修复 {} 处",
+                                    current.format_path(),
+                                    pass,
                                     applied
                                 );
                             }
                         }
-                        // Drop fixed rules from the report so remaining issues are clearer.
+
+                        if total_applied > 0 {
+                            if !lint_options.quiet {
+                                eprintln!(
+                                    "{}: 合计自动修复 {} 处（安全规则：中文/标点/空格），已写回文件",
+                                    current.format_path(),
+                                    total_applied
+                                );
+                            }
+                        } else if !lint_options.quiet {
+                            eprintln!(
+                                "{}: 没有可自动应用的安全修复（拼写类不会自动改，以免误伤）",
+                                current.format_path()
+                            );
+                        }
+
+                        // Report only remaining (typically SpellCheck / English rules).
                         named_lints.retain(|rule, _| !is_safe_auto_fix_rule(rule));
                         lint_count_after = named_lints.values().map(|v| v.len()).sum::<usize>();
-                    } else if !lint_options.quiet {
-                        eprintln!(
-                            "{}: 没有可自动应用的安全修复（拼写类建议不会自动改，以免误伤）",
-                            current.format_path()
-                        );
+                    } else {
+                        // Text / stdin: single-pass fix to stdout
+                        let (fixed, applied) =
+                            apply_first_suggestions(&named_lints, &working_text);
+                        if applied > 0 {
+                            print!("{fixed}");
+                            if !lint_options.quiet {
+                                eprintln!(
+                                    "已自动修复 {} 处（安全规则；输出到标准输出）",
+                                    applied
+                                );
+                            }
+                            named_lints.retain(|rule, _| !is_safe_auto_fix_rule(rule));
+                            lint_count_after =
+                                named_lints.values().map(|v| v.len()).sum::<usize>();
+                        } else if !lint_options.quiet {
+                            eprintln!(
+                                "{}: 没有可自动应用的安全修复（拼写类不会自动改，以免误伤）",
+                                current.format_path()
+                            );
+                        }
                     }
                 }
 

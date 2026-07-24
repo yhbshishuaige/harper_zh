@@ -83,6 +83,10 @@ cargo build -p harper-cli --release
 # 拼写建议（SpellCheck）不会自动改，避免 gpt→get 一类误伤
 ./target/release/harper-cli lint notes.md --fix
 
+# 自动修复会多轮应用安全规则；专有名词拼写（gpt/claude 等）不会自动改
+# 若只想修中文、完全忽略英文拼写：
+./target/release/harper-cli lint notes.md --fix --ignore SpellCheck
+
 # 手动忽略更多规则
 ./target/release/harper-cli lint notes.md --ignore SpellCheck,ZhCjkEnglishSpacing
 ```
