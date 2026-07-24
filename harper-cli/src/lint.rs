@@ -553,48 +553,104 @@ fn localize_lint_message(rule_name: &str, message: &str) -> String {
         return message.to_string();
     }
 
-    // Prefer rule-name based messages for stable UX
-    let by_rule = match rule_name {
-        "PronounVerbAgreement" => Some("代词与动词在人称/数上应保持一致。"),
-        "SpellCheck" => Some("疑似拼写错误。"),
-        "AnA" => Some("不定冠词 a / an 使用不当。"),
-        "ItsContraction" => Some("此处宜用 it's（it is / it has），而不是所有格 its。"),
-        "ItsPossessive" => Some("此处宜用所有格 its，而不是 it's。"),
-        "TheirToThere" => Some("此处宜用 there，而不是 their。"),
-        "TheirToTheyre" => Some("此处宜用 they're，而不是 their。"),
-        "SentenceCapitalization" => Some("句首宜大写。"),
-        "RepeatedWords" => Some("词语重复。"),
-        "LongSentences" => Some("句子过长，可考虑拆分。"),
-        "UnclosedQuotes" => Some("引号未闭合。"),
-        "EllipsisLength" => Some("省略号长度不规范。"),
-        "MissingSpace" => Some("缺少空格。"),
-        "NumberSuffixCapitalization" => Some("序数词后缀大小写不规范。"),
-        "CorrectNumberSuffix" => Some("序数词后缀不正确。"),
-        "OxfordComma" => Some("牛津逗号相关建议。"),
-        "CommaFixes" => Some("逗号用法建议。"),
-        "CurrencyPlacement" => Some("货币符号位置建议。"),
-        "AvoidCurses" => Some("建议避免粗俗用语。"),
-        "BoringWords" => Some("用词较为平淡，可考虑更具体的表达。"),
-        "SpelledNumbers" => Some("数字书写形式建议。"),
-        _ => None,
+    // Extract `backtick` spans for better Chinese rewrites
+    let ticks: Vec<&str> = {
+        let mut out = Vec::new();
+        let mut rest = message;
+        while let Some(i) = rest.find('`') {
+            rest = &rest[i + 1..];
+            if let Some(j) = rest.find('`') {
+                out.push(&rest[..j]);
+                rest = &rest[j + 1..];
+            } else {
+                break;
+            }
+        }
+        out
     };
-    if let Some(zh) = by_rule {
-        return zh.to_string();
+
+    // Prefer rule-name based messages for stable UX
+    match rule_name {
+        "SpellCheck" => {
+            if message.contains("Did you mean to spell") {
+                if let Some(w) = ticks.first() {
+                    return format!("疑似拼写错误：`{w}` 是否拼写正确？");
+                }
+                return "疑似拼写错误。".into();
+            }
+            if message.contains("Did you mean") {
+                if let Some(w) = ticks.first() {
+                    return format!("您是否想写「{w}」？");
+                }
+                return "疑似拼写错误，请检查拼写。".into();
+            }
+            return "疑似拼写错误。".into();
+        }
+        "Dashes" => {
+            if message.to_ascii_lowercase().contains("em dash")
+                || message.contains("three hyphens")
+            {
+                return "建议将这三个连字符替换为破折号（—）。".into();
+            }
+            if message.to_ascii_lowercase().contains("en dash") {
+                return "建议使用短破折号（–）。".into();
+            }
+            return "破折号用法建议。".into();
+        }
+        "PronounVerbAgreement" => return "代词与动词在人称/数上应保持一致。".into(),
+        "AnA" => return "不定冠词 a / an 使用不当。".into(),
+        "ItsContraction" => {
+            return "此处宜用 it's（it is / it has），而不是所有格 its。".into()
+        }
+        "ItsPossessive" => return "此处宜用所有格 its，而不是 it's。".into(),
+        "TheirToThere" => return "此处宜用 there，而不是 their。".into(),
+        "TheirToTheyre" => return "此处宜用 they're，而不是 their。".into(),
+        "SentenceCapitalization" => return "句首宜大写。".into(),
+        "RepeatedWords" => return "词语重复。".into(),
+        "LongSentences" => return "句子过长，可考虑拆分。".into(),
+        "UnclosedQuotes" => return "引号未闭合。".into(),
+        "EllipsisLength" => return "省略号长度不规范。".into(),
+        "MissingSpace" => return "缺少空格。".into(),
+        "NumberSuffixCapitalization" => return "序数词后缀大小写不规范。".into(),
+        "CorrectNumberSuffix" => return "序数词后缀不正确。".into(),
+        "OxfordComma" => return "牛津逗号相关建议。".into(),
+        "CommaFixes" => return "逗号用法建议。".into(),
+        "CurrencyPlacement" => return "货币符号位置建议。".into(),
+        "AvoidCurses" => return "建议避免粗俗用语。".into(),
+        "BoringWords" => return "用词较为平淡，可考虑更具体的表达。".into(),
+        "SpelledNumbers" => return "数字书写形式建议。".into(),
+        "Matcher" => {}
+        _ => {}
     }
 
     // Phrase-level fallbacks
     let lower = message.to_ascii_lowercase();
+    if lower.contains("did you mean to spell") {
+        if let Some(w) = ticks.first() {
+            return format!("疑似拼写错误：`{w}` 是否拼写正确？");
+        }
+        return "疑似拼写错误。".into();
+    }
+    if lower.contains("did you mean") {
+        if let Some(w) = ticks.first() {
+            return format!("您是否想写「{w}」？");
+        }
+        return "疑似拼写错误，请检查拼写。".into();
+    }
+    if lower.contains("three hyphens") || lower.contains("em dash") {
+        return "建议将这三个连字符替换为破折号（—）。".into();
+    }
     if lower.contains("agree") && lower.contains("pronoun") {
         return "代词与动词在人称/数上应保持一致。".into();
     }
     if lower.contains("indefinite article") {
         return "不定冠词 a / an 使用不当。".into();
     }
-    if lower.contains("did you mean") {
-        return format!("拼写建议：{}", message);
-    }
     if lower.contains("spelling") {
         return "疑似拼写问题。".into();
+    }
+    if lower.contains("replace") && lower.contains("with") {
+        return format!("建议替换：{message}");
     }
 
     // Last resort: keep original so we never hide information
