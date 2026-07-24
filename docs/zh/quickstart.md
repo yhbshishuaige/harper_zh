@@ -68,3 +68,21 @@ cargo build -p harper-cli --release
 | [rules-catalog.md](./rules-catalog.md) | 全部短语规则目录 |
 | [teaching-checklist.md](./teaching-checklist.md) | 教研审核清单 |
 | [../../harper-zh/CONTRIBUTING_ZH.md](../../harper-zh/CONTRIBUTING_ZH.md) | 如何贡献规则 |
+
+
+## 7. 自动修复与关闭小题大做
+
+```bash
+# 默认会忽略 Dashes（表格里的 --- 不当成破折号错误）
+./target/release/harper-cli lint notes.md --format compact
+
+# 若仍要检查 Dashes：
+./target/release/harper-cli lint notes.md --no-default-ignore
+
+# 直接改文件（只自动应用安全规则：中文/标点/中英空格）
+# 拼写建议（SpellCheck）不会自动改，避免 gpt→get 一类误伤
+./target/release/harper-cli lint notes.md --fix
+
+# 手动忽略更多规则
+./target/release/harper-cli lint notes.md --ignore SpellCheck,ZhCjkEnglishSpacing
+```

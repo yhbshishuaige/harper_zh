@@ -92,6 +92,13 @@ enum Args {
         /// Suppress informational status messages and only output actual lint errors.
         #[arg(long)]
         quiet: bool,
+        /// Apply the first suggestion for each issue and write changes back to files.
+        /// Text/stdin input prints the fixed text to stdout instead.
+        #[arg(long)]
+        fix: bool,
+        /// Do not apply the built-in default ignore list (e.g. Dashes for markdown tables).
+        #[arg(long)]
+        no_default_ignore: bool,
     },
     /// Parse a provided document and print the detected symbols.
     Parse {
@@ -258,6 +265,8 @@ fn main() -> anyhow::Result<()> {
             weirpacks,
             format,
             quiet,
+            fix,
+            no_default_ignore,
         } => {
             let dialect = parse_dialect(&dialect_str)
                 .map_err(|e| anyhow!("Invalid dialect '{}': {}", dialect_str, e))?;
@@ -276,6 +285,8 @@ fn main() -> anyhow::Result<()> {
                     color,
                     format,
                     quiet,
+                    fix,
+                    no_default_ignore,
                 },
                 user_dict_path,
                 // TODO workspace_dict_path?

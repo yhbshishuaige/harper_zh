@@ -92,6 +92,20 @@ cargo build -p harper-cli --release
 echo '惊天早上吃饭了吗' | ./target/release/harper-cli lint --format compact
 ```
 
+### 自动修复（写回文件）
+
+```bash
+# 只自动修复「安全」规则：中文语病/标点/中英空格
+# 不会自动应用英文拼写建议（避免误改专有名词）
+./target/release/harper-cli lint your.txt --fix
+```
+
+默认忽略小题大做规则 `Dashes`（Markdown 表格的 `---`）。若要恢复：
+
+```bash
+./target/release/harper-cli lint your.txt --no-default-ignore
+```
+
 ### 只启用中文规则
 
 ```bash

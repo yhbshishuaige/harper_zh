@@ -94,7 +94,16 @@ pub struct LintOptions {
     pub color: bool,
     pub format: OutputFormat,
     pub quiet: bool,
+    /// Write fixes back to files (or stdout for text/stdin).
+    pub fix: bool,
+    /// Disable built-in default ignores (Dashes, etc.).
+    pub no_default_ignore: bool,
 }
+
+/// Rules that are commonly noisy for Chinese/tech notes (markdown tables, etc.).
+const DEFAULT_IGNORE_RULES: &[&str] = &[
+    "Dashes", // `---` in markdown tables is not an em dash mistake
+];
 
 enum ReportStyle {
     FullAriadne,
@@ -192,8 +201,21 @@ pub fn lint(
         ref mut only,
         dialect,
         ref weirpack_inputs,
+        no_default_ignore,
+        fix: _,
         ..
     } = lint_options;
+
+    // Merge default ignore list (e.g. Dashes) unless disabled or --only is used.
+    if !no_default_ignore && only.is_none() {
+        let mut merged = ignore.take().unwrap_or_default();
+        for rule in DEFAULT_IGNORE_RULES {
+            if !merged.iter().any(|r| r == rule) {
+                merged.push((*rule).to_string());
+            }
+        }
+        *ignore = Some(merged);
+    }
 
     // Zero or more inputs, default to stdin if not provided
     if inputs.is_empty() {
@@ -409,6 +431,8 @@ fn lint_one_input(
         color: _,
         format: _,
         quiet: _,
+        fix,
+        no_default_ignore: _,
     } = lint_options;
 
     let mut lint_kinds: HashMap<LintKind, usize> = HashMap::new();
@@ -468,7 +492,44 @@ fn lint_one_input(
                 if !keep_overlapping_lints {
                     remove_overlaps_map(&mut named_lints);
                 }
-                let lint_count_after = named_lints.values().map(|v| v.len()).sum::<usize>();
+                let mut lint_count_after = named_lints.values().map(|v| v.len()).sum::<usize>();
+
+                // Optionally apply first suggestion of safe lints and write back.
+                if *fix {
+                    let original = source.as_ref();
+                    let (fixed, applied) = apply_first_suggestions(&named_lints, original);
+                    if applied > 0 {
+                        if let Some(file) = single_input.try_as_file_ref() {
+                            fs::write(file.path(), &fixed).with_context(|| {
+                                format!("无法写入修复结果到 {}", file.path().display())
+                            })?;
+                            if !lint_options.quiet {
+                                eprintln!(
+                                    "{}: 已自动修复 {} 处（中文/标点/空格等安全规则），并写回文件",
+                                    current.format_path(),
+                                    applied
+                                );
+                            }
+                        } else {
+                            // Text / stdin: print fixed document to stdout
+                            print!("{fixed}");
+                            if !lint_options.quiet {
+                                eprintln!(
+                                    "已自动修复 {} 处（中文/标点/空格等安全规则；输出到标准输出）",
+                                    applied
+                                );
+                            }
+                        }
+                        // Drop fixed rules from the report so remaining issues are clearer.
+                        named_lints.retain(|rule, _| !is_safe_auto_fix_rule(rule));
+                        lint_count_after = named_lints.values().map(|v| v.len()).sum::<usize>();
+                    } else if !lint_options.quiet {
+                        eprintln!(
+                            "{}: 没有可自动应用的安全修复（拼写类建议不会自动改，以免误伤）",
+                            current.format_path()
+                        );
+                    }
+                }
 
                 // Extract the lint kinds and rules etc. for reporting
                 (lint_kinds, lint_rules) = count_lint_kinds_and_rules(&named_lints);
@@ -655,6 +716,52 @@ fn localize_lint_message(rule_name: &str, message: &str) -> String {
 
     // Last resort: keep original so we never hide information
     message.to_string()
+}
+
+
+/// Rules that are safe to auto-fix (deterministic Chinese/punctuation/style fixes).
+/// SpellCheck is intentionally excluded: suggestions like `gpt`→`get` are often wrong.
+fn is_safe_auto_fix_rule(rule_name: &str) -> bool {
+    matches!(
+        rule_name,
+        "ZhHomophoneSpell"
+            | "ZhDeDiDe"
+            | "ZhWordConfusion"
+            | "ZhRedundancy"
+            | "ZhPunctuation"
+            | "ZhCjkEnglishSpacing"
+    ) || rule_name.starts_with("Zh")
+}
+
+/// Apply the first suggestion of each **safe** lint, from the end of the document
+/// forward so earlier spans stay valid. Returns (fixed_text, applied_count).
+fn apply_first_suggestions(
+    named_lints: &BTreeMap<String, Vec<Lint>>,
+    source: &str,
+) -> (String, usize) {
+    let mut chars: Vec<char> = source.chars().collect();
+
+    // (start, lint) only for rules we trust to auto-fix
+    let mut items: Vec<(usize, &Lint)> = named_lints
+        .iter()
+        .filter(|(rule, _)| is_safe_auto_fix_rule(rule))
+        .flat_map(|(_, lints)| lints.iter().map(|lint| (lint.span.start, lint)))
+        .collect();
+    items.sort_by_key(|(start, _)| std::cmp::Reverse(*start));
+
+    let mut applied = 0usize;
+    for (_, lint) in items {
+        let Some(suggestion) = lint.suggestions.first() else {
+            continue;
+        };
+        if lint.span.end > chars.len() || lint.span.start > chars.len() {
+            continue;
+        }
+        suggestion.apply(lint.span, &mut chars);
+        applied += 1;
+    }
+
+    (chars.into_iter().collect(), applied)
 }
 
 fn configure_lint_group(
