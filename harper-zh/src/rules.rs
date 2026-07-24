@@ -2,6 +2,9 @@
 //!
 //! Rule pairs live in `data/*.json` (embedded at compile time) so teachers and
 //! contributors can extend them without touching Rust matching logic.
+//!
+//! Lint **messages and rule descriptions are English** (consistent with upstream Harper).
+//! The `bad` / `good` forms remain Chinese text being corrected.
 
 use harper_core::linting::{LintGroup, LintKind};
 use serde::Deserialize;
@@ -203,7 +206,7 @@ mod tests {
         assert!(
             !hits
                 .iter()
-                .any(|(_, m)| m.contains("今天早上") && m.contains("应为")),
+                .any(|(r, m)| r == "ZhHomophoneSpell" && m.contains("今天早上")),
             "should not flag correct 今天早上: {:?}",
             hits
         );
@@ -233,5 +236,37 @@ mod tests {
         assert!(names.contains(&"ZhDeDiDe"));
         assert!(names.contains(&"ZhWordConfusion"));
         assert!(names.contains(&"ZhRedundancy"));
+    }
+
+    #[test]
+    fn messages_are_english() {
+        for set in load_builtin_rule_sets() {
+            assert!(
+                set.description.is_ascii()
+                    || set.description.chars().next().unwrap().is_ascii_alphabetic()
+                    || set.description.starts_with("Common")
+                    || set.description.starts_with("Redundant"),
+                "description should be English-led: {}",
+                set.description
+            );
+            for p in &set.pairs {
+                let m = &p.message;
+                assert!(
+                    m.starts_with("Possible")
+                        || m.starts_with("Use ")
+                        || m.starts_with("Confusion")
+                        || m.starts_with("Redundant")
+                        || m.starts_with("Idiom")
+                        || m.starts_with("Prefer")
+                        || m.starts_with("For ")
+                        || m.starts_with("In ")
+                        || m.starts_with("Fixed")
+                        || m.chars().next().is_some_and(|c| c.is_ascii_alphabetic()),
+                    "message should be English: {} ({})",
+                    m,
+                    p.bad
+                );
+            }
+        }
     }
 }

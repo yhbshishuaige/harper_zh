@@ -1,498 +1,498 @@
 {
   "name": "ZhWordConfusion",
   "kind": "WordChoice",
-  "description": "常见易混词：在/再、做/作、以/已、象/像、须/需、登录/登陆 等。",
+  "description": "Common confusable words: 在/再, 做/作, 以/已, 象/像, 须/需, 登录/登陆, etc.",
   "priority": 42,
   "pairs": [
     {
       "bad": "在见",
       "good": "再见",
-      "message": "「在/再」混淆：告别应为「再见」。"
+      "message": "Confusion of 在/再: for goodbye, use “再见”."
     },
     {
       "bad": "在见吧",
       "good": "再见吧",
-      "message": "「在/再」混淆：告别应为「再见」。"
+      "message": "Confusion of 在/再: for goodbye, use “再见吧”."
     },
     {
       "bad": "在见一次",
       "good": "再见一次",
-      "message": "「在/再」混淆：应为「再见」。"
+      "message": "Confusion of 在/再: for goodbye, use “再见一次”."
     },
     {
       "bad": "在次",
       "good": "再次",
-      "message": "「在/再」混淆：应为「再次」。"
+      "message": "Confusion of 在/再: use “再次”."
     },
     {
       "bad": "在说",
       "good": "再说",
-      "message": "「在/再」混淆：应为「再说」。"
+      "message": "Confusion of 在/再: use “再说”."
     },
     {
       "bad": "在考虑一下",
       "good": "再考虑一下",
-      "message": "「在/再」混淆：应为「再考虑一下」。"
+      "message": "Confusion of 在/再: use “再考虑一下”."
     },
     {
       "bad": "在看一遍",
       "good": "再看一遍",
-      "message": "「在/再」混淆：应为「再看一遍」。"
+      "message": "Confusion of 在/再: use “再看一遍”."
     },
     {
       "bad": "在试一次",
       "good": "再试一次",
-      "message": "「在/再」混淆：应为「再试一次」。"
+      "message": "Confusion of 在/再: use “再试一次”."
     },
     {
       "bad": "在想想",
       "good": "再想想",
-      "message": "「在/再」混淆：应为「再想想」。"
+      "message": "Confusion of 在/再: use “再想想”."
     },
     {
       "bad": "在等一下",
       "good": "再等一下",
-      "message": "「在/再」混淆：应为「再等一下」。"
+      "message": "Confusion of 在/再: use “再等一下”."
     },
     {
       "bad": "在来一次",
       "good": "再来一次",
-      "message": "「在/再」混淆：应为「再来一次」。"
+      "message": "Confusion of 在/再: use “再来一次”."
     },
     {
       "bad": "在接再厉",
       "good": "再接再厉",
-      "message": "「在/再」混淆：成语应为「再接再厉」。"
+      "message": "Confusion of 在/再: use “再接再厉”."
     },
     {
       "bad": "做业",
       "good": "作业",
-      "message": "「做/作」混淆：应为「作业」。"
+      "message": "Confusion of 做/作: use “作业”."
     },
     {
       "bad": "作饭",
       "good": "做饭",
-      "message": "「做/作」混淆：应为「做饭」。"
+      "message": "Confusion of 做/作: use “做饭”."
     },
     {
       "bad": "作事",
       "good": "做事",
-      "message": "「做/作」混淆：应为「做事」。"
+      "message": "Confusion of 做/作: use “做事”."
     },
     {
       "bad": "作梦",
       "good": "做梦",
-      "message": "「做/作」混淆：应为「做梦」。"
+      "message": "Confusion of 做/作: use “做梦”."
     },
     {
       "bad": "作工",
       "good": "做工",
-      "message": "「做/作」混淆：应为「做工」。"
+      "message": "Confusion of 做/作: use “做工”."
     },
     {
       "bad": "做家",
       "good": "作家",
-      "message": "「做/作」混淆：应为「作家」。"
+      "message": "Confusion of 做/作: use “作家”."
     },
     {
       "bad": "做品",
       "good": "作品",
-      "message": "「做/作」混淆：应为「作品」。"
+      "message": "Confusion of 做/作: use “作品”."
     },
     {
       "bad": "做用",
       "good": "作用",
-      "message": "「做/作」混淆：应为「作用」。"
+      "message": "Confusion of 做/作: use “作用”."
     },
     {
       "bad": "做者",
       "good": "作者",
-      "message": "「做/作」混淆：应为「作者」。"
+      "message": "Confusion of 做/作: use “作者”."
     },
     {
       "bad": "做文",
       "good": "作文",
-      "message": "「做/作」混淆：应为「作文」。"
+      "message": "Confusion of 做/作: use “作文”."
     },
     {
       "bad": "做战",
       "good": "作战",
-      "message": "「做/作」混淆：应为「作战」。"
+      "message": "Confusion of 做/作: use “作战”."
     },
     {
       "bad": "做风",
       "good": "作风",
-      "message": "「做/作」混淆：应为「作风」。"
+      "message": "Confusion of 做/作: use “作风”."
     },
     {
       "bad": "做弊",
       "good": "作弊",
-      "message": "「做/作」混淆：应为「作弊」。"
+      "message": "Confusion of 做/作: use “作弊”."
     },
     {
       "bad": "做案",
       "good": "作案",
-      "message": "「做/作」混淆：应为「作案」。"
+      "message": "Confusion of 做/作: use “作案”."
     },
     {
       "bad": "做为",
       "good": "作为",
-      "message": "「做/作」混淆：在「作为」义时宜用「作为」。"
+      "message": "Confusion of 做/作: in the sense of “as / acting as”, use “作为”."
     },
     {
       "bad": "作完作业",
       "good": "做完作业",
-      "message": "「做/作」混淆：完成义宜用「做」。"
+      "message": "Confusion of 做/作: for the sense of completing something, prefer 做 → “做完作业”."
     },
     {
       "bad": "作好准备",
       "good": "做好准备",
-      "message": "「做/作」混淆：完成义宜用「做」。"
+      "message": "Confusion of 做/作: for the sense of completing something, prefer 做 → “做好准备”."
     },
     {
       "bad": "以经",
       "good": "已经",
-      "message": "「以/已」混淆：应为「已经」。"
+      "message": "Confusion of 以/已: use “已经”."
     },
     {
       "bad": "以经完成",
       "good": "已经完成",
-      "message": "「以/已」混淆：应为「已经」。"
+      "message": "Confusion of 以/已: use “已经完成”."
     },
     {
       "bad": "以经是",
       "good": "已经是",
-      "message": "「以/已」混淆：应为「已经」。"
+      "message": "Confusion of 以/已: use “已经是”."
     },
     {
       "bad": "以经有",
       "good": "已经有",
-      "message": "「以/已」混淆：应为「已经」。"
+      "message": "Confusion of 以/已: use “已经有”."
     },
     {
       "bad": "以经在",
       "good": "已经在",
-      "message": "「以/已」混淆：应为「已经」。"
+      "message": "Confusion of 以/已: use “已经在”."
     },
     {
       "bad": "已后",
       "good": "以后",
-      "message": "「以/已」混淆：表示之后时间应为「以后」。"
+      "message": "Confusion of 以/已: for later time, use “以后”."
     },
     {
       "bad": "已及",
       "good": "以及",
-      "message": "「以/已」混淆：应为「以及」。"
+      "message": "Confusion of 以/已: use “以及”."
     },
     {
       "bad": "已免",
       "good": "以免",
-      "message": "「以/已」混淆：应为「以免」。"
+      "message": "Confusion of 以/已: use “以免”."
     },
     {
       "bad": "已便",
       "good": "以便",
-      "message": "「以/已」混淆：应为「以便」。"
+      "message": "Confusion of 以/已: use “以便”."
     },
     {
       "bad": "已防",
       "good": "以防",
-      "message": "「以/已」混淆：应为「以防」。"
+      "message": "Confusion of 以/已: use “以防”."
     },
     {
       "bad": "已至于",
       "good": "以至于",
-      "message": "「以/已」混淆：应为「以至于」。"
+      "message": "Confusion of 以/已: use “以至于”."
     },
     {
       "bad": "已致",
       "good": "以致",
-      "message": "「以/已」混淆：应为「以致」。"
+      "message": "Confusion of 以/已: use “以致”."
     },
     {
       "bad": "好象",
       "good": "好像",
-      "message": "「象/像」混淆：应为「好像」。"
+      "message": "Confusion of 象/像: use “好像”."
     },
     {
       "bad": "成象",
       "good": "成像",
-      "message": "技术语境中常为「成像」。"
+      "message": "In technical contexts, usually “成像”."
     },
     {
       "bad": "录象",
       "good": "录像",
-      "message": "应为「录像」。"
+      "message": "Use “录像”."
     },
     {
       "bad": "照象",
       "good": "照像",
-      "message": "应为「照像」/「照相」。"
+      "message": "Use “照像”."
     },
     {
       "bad": "象素",
       "good": "像素",
-      "message": "应为「像素」。"
+      "message": "Use “像素”."
     },
     {
       "bad": "肖象",
       "good": "肖像",
-      "message": "应为「肖像」。"
+      "message": "Use “肖像”."
     },
     {
       "bad": "抽像",
       "good": "抽象",
-      "message": "应为「抽象」。"
+      "message": "Use “抽象”."
     },
     {
       "bad": "形像",
       "good": "形象",
-      "message": "在「形象」义时宜用「形象」。"
+      "message": "Prefer “形象”."
     },
     {
       "bad": "象样",
       "good": "像样",
-      "message": "应为「像样」。"
+      "message": "Use “像样”."
     },
     {
       "bad": "象话",
       "good": "像话",
-      "message": "应为「像话」。"
+      "message": "Use “像话”."
     },
     {
       "bad": "必需要",
       "good": "必须要",
-      "message": "「须/需」冗余：宜用「必须要」或「需要」。"
+      "message": "Redundant 须/需: prefer “必须要” or 需要."
     },
     {
       "bad": "需须",
       "good": "必须",
-      "message": "「须/需」混淆：应为「必须」。"
+      "message": "Confusion of 须/需: use “必须”."
     },
     {
       "bad": "须要",
       "good": "需要",
-      "message": "「须/需」混淆：此处宜用「需要」。"
+      "message": "Confusion of 须/需: here prefer “需要”."
     },
     {
       "bad": "必需要求",
       "good": "必须要求",
-      "message": "「须/需」：宜检查是否应为「必须」。"
+      "message": "Confusion of 须/需: use “必须要求”."
     },
     {
       "bad": "必须品",
       "good": "必需品",
-      "message": "「须/需」混淆：名词宜用「必需品」。"
+      "message": "Confusion of 须/需: as a noun, use “必需品”."
     },
     {
       "bad": "不须",
       "good": "不需",
-      "message": "在「不需要」义时宜用「不需/不需要」。"
+      "message": "Prefer “不需”."
     },
     {
       "bad": "不须要",
       "good": "不需要",
-      "message": "「须/需」混淆：应为「不需要」。"
+      "message": "Confusion of 须/需: use “不需要”."
     },
     {
       "bad": "即然",
       "good": "既然",
-      "message": "「即/既」混淆：应为「既然」。"
+      "message": "Confusion of 即/既: use “既然”."
     },
     {
       "bad": "既使",
       "good": "即使",
-      "message": "「即/既」混淆：应为「即使」。"
+      "message": "Confusion of 即/既: use “即使”."
     },
     {
       "bad": "即是",
       "good": "既是",
-      "message": "在「既是…又是」义时宜用「既是」。"
+      "message": "Prefer “既是”."
     },
     {
       "bad": "即往",
       "good": "既往",
-      "message": "成语/固定搭配宜用「既往」。"
+      "message": "Fixed expression: use “既往”."
     },
     {
       "bad": "登陆网站",
       "good": "登录网站",
-      "message": "上网操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录网站”."
     },
     {
       "bad": "登陆系统",
       "good": "登录系统",
-      "message": "系统操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录系统”."
     },
     {
       "bad": "登陆账号",
       "good": "登录账号",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录账号”."
     },
     {
       "bad": "登陆游戏",
       "good": "登录游戏",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录游戏”."
     },
     {
       "bad": "登陆成功",
       "good": "登录成功",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录成功”."
     },
     {
       "bad": "登陆失败",
       "good": "登录失败",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录失败”."
     },
     {
       "bad": "登陆界面",
       "good": "登录界面",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录界面”."
     },
     {
       "bad": "登陆密码",
       "good": "登录密码",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录密码”."
     },
     {
       "bad": "登陆页面",
       "good": "登录页面",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “登录页面”."
     },
     {
       "bad": "请登陆",
       "good": "请登录",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “请登录”."
     },
     {
       "bad": "用户登陆",
       "good": "用户登录",
-      "message": "操作为「登录」，不是「登陆」。"
+      "message": "For signing in online, use 登录 (not 登陆): “用户登录”."
     },
     {
       "bad": "帐号",
       "good": "账号",
-      "message": "现代汉语推荐「账号」。"
+      "message": "In modern Chinese, prefer “账号”."
     },
     {
       "bad": "帐号密码",
       "good": "账号密码",
-      "message": "现代汉语推荐「账号」。"
+      "message": "In modern Chinese, prefer “账号密码”."
     },
     {
       "bad": "帐户",
       "good": "账户",
-      "message": "现代汉语推荐「账户」。"
+      "message": "In modern Chinese, prefer “账户”."
     },
     {
       "bad": "帐单",
       "good": "账单",
-      "message": "现代汉语推荐「账单」。"
+      "message": "In modern Chinese, prefer “账单”."
     },
     {
       "bad": "帐本",
       "good": "账本",
-      "message": "现代汉语推荐「账本」。"
+      "message": "In modern Chinese, prefer “账本”."
     },
     {
       "bad": "记帐",
       "good": "记账",
-      "message": "现代汉语推荐「记账」。"
+      "message": "In modern Chinese, prefer “记账”."
     },
     {
       "bad": "结帐",
       "good": "结账",
-      "message": "现代汉语推荐「结账」。"
+      "message": "In modern Chinese, prefer “结账”."
     },
     {
       "bad": "其它的",
       "good": "其他的",
-      "message": "「其它/其他」：指人/事物均可，现代常用「其他」。"
+      "message": "Confusion of 其它/其他: modern usage prefers “其他的”."
     },
     {
       "bad": "其它人",
       "good": "其他人",
-      "message": "「其它/其他」：指人宜用「其他」。"
+      "message": "Confusion of 其它/其他: modern usage prefers “其他人”."
     },
     {
       "bad": "招聘启示",
       "good": "招聘启事",
-      "message": "应为「招聘启事」。"
+      "message": "Use “招聘启事” (public notice), not 启示."
     },
     {
       "bad": "寻人启示",
       "good": "寻人启事",
-      "message": "应为「寻人启事」。"
+      "message": "Use “寻人启事” (public notice), not 启示."
     },
     {
       "bad": "遗失启示",
       "good": "遗失启事",
-      "message": "应为「遗失启事」。"
+      "message": "Use “遗失启事” (public notice), not 启示."
     },
     {
       "bad": "征稿启示",
       "good": "征稿启事",
-      "message": "应为「征稿启事」。"
+      "message": "Use “征稿启事” (public notice), not 启示."
     },
     {
       "bad": "反应情况",
       "good": "反映情况",
-      "message": "「反应/反映」：汇报情况宜用「反映」。"
+      "message": "Confusion of 反应/反映: for reporting/reflecting, use “反映情况”."
     },
     {
       "bad": "反应问题",
       "good": "反映问题",
-      "message": "「反应/反映」：汇报问题宜用「反映」。"
+      "message": "Confusion of 反应/反映: for reporting/reflecting, use “反映问题”."
     },
     {
       "bad": "反应意见",
       "good": "反映意见",
-      "message": "「反应/反映」：汇报意见宜用「反映」。"
+      "message": "Confusion of 反应/反映: for reporting/reflecting, use “反映意见”."
     },
     {
       "bad": "截止到目前",
       "good": "截至目前",
-      "message": "「截止/截至」：表示到某时宜用「截至」。"
+      "message": "Confusion of 截止/截至: for “as of / up to”, use “截至目前”."
     },
     {
       "bad": "截止昨天",
       "good": "截至昨天",
-      "message": "「截止/截至」：表示到某时宜用「截至」。"
+      "message": "Confusion of 截止/截至: for “as of / up to”, use “截至昨天”."
     },
     {
       "bad": "截止上月",
       "good": "截至上月",
-      "message": "「截止/截至」：表示到某时宜用「截至」。"
+      "message": "Confusion of 截止/截至: for “as of / up to”, use “截至上月”."
     },
     {
       "bad": "以至使",
       "good": "以致",
-      "message": "「以至/以致」：导致结果宜用「以致」。"
+      "message": "Confusion of 以至/以致: for a resulting consequence, use “以致”."
     },
     {
       "bad": "权利机关",
       "good": "权力机关",
-      "message": "「权力/权利」：政权/职权义宜用「权力」。"
+      "message": "Confusion of 权力/权利: use “权力机关”."
     },
     {
       "bad": "保护权力",
       "good": "保护权利",
-      "message": "「权力/权利」：公民权益义宜用「权利」。"
+      "message": "Confusion of 权力/权利: use “保护权利”."
     },
     {
       "bad": "人身权力",
       "good": "人身权利",
-      "message": "「权力/权利」：公民权益义宜用「权利」。"
+      "message": "Confusion of 权力/权利: use “人身权利”."
     },
     {
       "bad": "通信权力",
       "good": "通信权利",
-      "message": "「权力/权利」：公民权益义宜用「权利」。"
+      "message": "Confusion of 权力/权利: use “通信权利”."
     },
     {
       "bad": "订定计划",
       "good": "制定计划",
-      "message": "宜用「制定计划」。"
+      "message": "Prefer “制定计划”."
     }
   ]
 }

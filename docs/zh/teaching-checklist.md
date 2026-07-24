@@ -19,16 +19,19 @@
 |--------|----------|
 | `bad` ≠ `good` | 必须 |
 | `bad` 长度 | 建议 ≥ 2 个汉字（特例除外） |
-| `message` | 说清「错在哪 / 应为什么」 |
+| `message` | **英文**，说清 what is wrong / preferred form |
 | 分类文件 | 同音→`homophone`；易混→`word_confusion` 等 |
 | 重复 | 同一 `bad` 不要多条互相冲突 |
 
-### message 写法示例
+### message 写法示例（**英文**）
 
-- 好：`疑似前后鼻音混淆：应为「今天早上」。`
-- 好：`「在/再」混淆：告别应为「再见」。`
-- 差：`错误`（无信息）
-- 差：`建议修改`（无正误对照）
+Lint 提示语请使用 **English**（与上游 Harper 一致）；`bad`/`good` 仍为中文写法。
+
+- 好：`Possible nasal-final confusion: use “今天早上”.`
+- 好：`Confusion of 在/再: for goodbye, use “再见”.`
+- 好：`Use 地 before a verb (adverbial): “开心地跑”.`
+- 差：`错误`（无信息 / 非英文）
+- 差：`Please fix`（无正误对照）
 
 ## 三、分类对照
 
