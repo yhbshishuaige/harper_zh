@@ -1,7 +1,14 @@
 <div id="header" align="center">
     <img src="logo.svg" width="400px" />
     <h1>Harper</h1>
+    <p>
+      <strong>English</strong> ·
+      <a href="./README_zh.md">简体中文</a>
+    </p>
 </div>
+
+> **This repository is the `harper_zh` fork** with Chinese MVP support.
+> Chinese docs: **[README_zh.md](./README_zh.md)** · Rule curation: **[harper-zh/CONTRIBUTING_ZH.md](./harper-zh/CONTRIBUTING_ZH.md)**
 
 [![Harper Binaries](https://github.com/automattic/harper/actions/workflows/binaries.yml/badge.svg)](https://github.com/automattic/harper/actions/workflows/binaries.yml)
 [![Website](https://github.com/automattic/harper/actions/workflows/build_web.yml/badge.svg)](https://github.com/automattic/harper/actions/workflows/build_web.yml)
@@ -38,7 +45,22 @@ This fork (`harper_zh`) adds **Chinese (中文) MVP support** via the `harper-zh
 - Common usage errors: 的/地/得, 在/再, 做/作, 以/已, 象/像, 须/需, …
 - Chinese–English mixed text spacing style + full English checking on Latin segments
 
-See [`harper-zh/README.md`](./harper-zh/README.md). Near-native full Chinese grammar is **not** in scope yet.
+### Chinese documentation
+
+| Doc | Description |
+|-----|-------------|
+| **[README_zh.md](./README_zh.md)** | 中文总览：安装、用法、规则、样例 |
+| **[harper-zh/README.md](./harper-zh/README.md)** | `harper-zh` 模块说明 |
+| **[harper-zh/CONTRIBUTING_ZH.md](./harper-zh/CONTRIBUTING_ZH.md)** | 教研向：如何用 JSON 扩展规则 |
+| **[sample_zh.txt](./sample_zh.txt)** | 中文 / 中英混排样例 |
+
+```bash
+cargo build -p harper-cli --release
+./target/release/harper-cli lint sample_zh.txt --format compact
+cargo test -p harper-zh
+```
+
+Near-native full Chinese grammar is **not** in scope yet.
 
 Upstream Harper currently only supports English, but the core is extensible to support other languages, so we welcome contributions that allow for other language support.
 
