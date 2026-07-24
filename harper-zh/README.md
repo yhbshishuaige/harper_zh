@@ -5,7 +5,9 @@
 `harper-zh` 是 [harper_zh](https://github.com/yhbshishuaige/harper_zh) fork 中的**中文检查模块**，为 [Harper](https://github.com/Automattic/harper) 增加中文与中英混排支持。
 
 仓库总览（中文）：[../README_zh.md](../README_zh.md)  
-规则贡献（教研）：[CONTRIBUTING_ZH.md](./CONTRIBUTING_ZH.md)
+中文文档中心：[../docs/zh/README.md](../docs/zh/README.md)  
+规则贡献（教研）：[CONTRIBUTING_ZH.md](./CONTRIBUTING_ZH.md)  
+规则目录：[../docs/zh/rules-catalog.md](../docs/zh/rules-catalog.md)
 
 ---
 

@@ -1,6 +1,7 @@
 # 中文规则贡献指南（教研用）
 
-> 仓库中文总览：[../README_zh.md](../README_zh.md) · 模块说明：[README.md](./README.md)
+> 仓库中文总览：[../README_zh.md](../README_zh.md) · 模块说明：[README.md](./README.md)  
+> 教研清单：[../docs/zh/teaching-checklist.md](../docs/zh/teaching-checklist.md) · 规则目录：[../docs/zh/rules-catalog.md](../docs/zh/rules-catalog.md)
 
 本 fork 的中文检查在 `harper-zh` 中。**扩展规则优先改 JSON，不必改 Rust 匹配逻辑。**
 

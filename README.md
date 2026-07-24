@@ -50,6 +50,10 @@ This fork (`harper_zh`) adds **Chinese (中文) MVP support** via the `harper-zh
 | Doc | Description |
 |-----|-------------|
 | **[README_zh.md](./README_zh.md)** | 中文总览：安装、用法、规则、样例 |
+| **[docs/zh/README.md](./docs/zh/README.md)** | 中文文档中心 |
+| **[docs/zh/quickstart.md](./docs/zh/quickstart.md)** | 快速开始 |
+| **[docs/zh/rules-catalog.md](./docs/zh/rules-catalog.md)** | 短语规则完整目录 |
+| **[docs/zh/teaching-checklist.md](./docs/zh/teaching-checklist.md)** | 教研审核清单 |
 | **[harper-zh/README.md](./harper-zh/README.md)** | `harper-zh` 模块说明 |
 | **[harper-zh/CONTRIBUTING_ZH.md](./harper-zh/CONTRIBUTING_ZH.md)** | 教研向：如何用 JSON 扩展规则 |
 | **[sample_zh.txt](./sample_zh.txt)** | 中文 / 中英混排样例 |

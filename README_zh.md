@@ -26,6 +26,7 @@
 - [设计说明](#设计说明)
 - [当前边界（暂不做）](#当前边界暂不做)
 - [文档索引](#文档索引)
+- [中文文档中心](./docs/zh/README.md)
 - [上游与致谢](#上游与致谢)
 
 ---
@@ -243,6 +244,10 @@ harper_zh/
 | 文档 | 说明 |
 |------|------|
 | [README_zh.md](./README_zh.md) | 中文总览（本页） |
+| [docs/zh/README.md](./docs/zh/README.md) | **中文文档中心** |
+| [docs/zh/quickstart.md](./docs/zh/quickstart.md) | 快速开始 |
+| [docs/zh/rules-catalog.md](./docs/zh/rules-catalog.md) | 全部短语规则目录 |
+| [docs/zh/teaching-checklist.md](./docs/zh/teaching-checklist.md) | 教研审核清单 |
 | [README.md](./README.md) | 英文总览 + 上游信息 |
 | [harper-zh/README.md](./harper-zh/README.md) | 中文模块说明 |
 | [harper-zh/CONTRIBUTING_ZH.md](./harper-zh/CONTRIBUTING_ZH.md) | 如何贡献 / 维护中文规则 |
