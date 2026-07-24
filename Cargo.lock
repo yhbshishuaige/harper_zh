@@ -4198,6 +4198,7 @@ dependencies = [
  "harper-stats",
  "harper-tex",
  "harper-typst",
+ "harper-zh",
  "hashbrown 0.16.1",
  "rayon",
  "serde",
@@ -4406,6 +4407,7 @@ dependencies = [
  "harper-stats",
  "harper-tex",
  "harper-typst",
+ "harper-zh",
  "open",
  "resolve-path",
  "serde",
@@ -4522,6 +4524,16 @@ dependencies = [
  "tracing",
  "tracing-wasm",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "harper-zh"
+version = "0.1.0"
+dependencies = [
+ "harper-core",
+ "pretty_assertions",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]

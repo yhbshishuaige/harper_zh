@@ -449,6 +449,8 @@ fn lint_one_input(
             Ok((doc, source)) => {
                 // Create the Lint Group from which we will lint this input, using the combined dictionary and the specified dialect
                 let mut lint_group = LintGroup::new_curated(merged_dictionary.into(), *dialect);
+                // Chinese rules (spelling confusions, 的/地/得, mixed CJK-English, …)
+                harper_zh::extend_lint_group(&mut lint_group);
 
                 for pack in weirpacks {
                     let pack_group = pack.to_lint_group()?;

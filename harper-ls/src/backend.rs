@@ -45,6 +45,17 @@ use tower_lsp_server::lsp_types::{
 use tower_lsp_server::{Client, LanguageServer, UriExt};
 use tracing::{error, info, warn};
 
+/// Curated English rules plus harper-zh Chinese rules.
+fn curated_with_zh(
+    dict: std::sync::Arc<impl harper_core::spell::Dictionary + 'static>,
+    dialect: Dialect,
+) -> LintGroup {
+    let mut group = LintGroup::new_curated(dict, dialect);
+    harper_zh::extend_lint_group(&mut group);
+    group
+}
+
+
 /// Return harper-ls version
 pub fn ls_version() -> &'static str {
     env!("CARGO_PKG_VERSION")
@@ -289,7 +300,7 @@ impl Backend {
 
             DocumentState {
                 ignored_lints,
-                linter: LintGroup::new_curated(dict.clone(), dialect)
+                linter: curated_with_zh(dict.clone(), dialect)
                     .with_lint_config(lint_config.clone()),
                 language_id: language_id.map(|v| v.to_string()),
                 dict: dict.clone(),
@@ -302,7 +313,7 @@ impl Backend {
             doc_state.dict = dict.clone();
             info!("Constructing new linter because of modified dictionary.");
             doc_state.linter =
-                LintGroup::new_curated(dict.clone(), dialect).with_lint_config(lint_config.clone());
+                curated_with_zh(dict.clone(), dialect).with_lint_config(lint_config.clone());
         }
 
         let Some(language_id) = &doc_state.language_id else {
@@ -327,7 +338,7 @@ impl Backend {
                 merged.add_dictionary(new_dict);
                 let merged = Arc::new(merged);
 
-                doc_state.linter = LintGroup::new_curated(merged.clone(), dialect)
+                doc_state.linter = curated_with_zh(merged.clone(), dialect)
                     .with_lint_config(lint_config.clone());
                 doc_state.dict = merged.clone();
             }
@@ -816,7 +827,7 @@ impl LanguageServer for Backend {
 
             for doc in doc_lock.values_mut() {
                 info!("Constructing new LintGroup for updated configuration.");
-                doc.linter = LintGroup::new_curated(doc.dict.clone(), config_lock.dialect)
+                doc.linter = curated_with_zh(doc.dict.clone(), config_lock.dialect)
                     .with_lint_config(config_lock.lint_config.clone());
             }
 

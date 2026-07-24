@@ -32,7 +32,15 @@ Harper is even small enough to load via [WebAssembly.](https://writewithharper.c
 
 ## Language Support
 
-Harper currently only supports English, but the core is extensible to support other languages, so we welcome contributions that allow for other language support.
+This fork (`harper_zh`) adds **Chinese (中文) MVP support** via the `harper-zh` crate:
+
+- Pure Chinese spelling confusions (homophones / nasal finals), e.g. `惊天早上` → `今天早上`
+- Common usage errors: 的/地/得, 在/再, 做/作, 以/已, 象/像, 须/需, …
+- Chinese–English mixed text spacing style + full English checking on Latin segments
+
+See [`harper-zh/README.md`](./harper-zh/README.md). Near-native full Chinese grammar is **not** in scope yet.
+
+Upstream Harper currently only supports English, but the core is extensible to support other languages, so we welcome contributions that allow for other language support.
 
 ## Performance Issues
 
